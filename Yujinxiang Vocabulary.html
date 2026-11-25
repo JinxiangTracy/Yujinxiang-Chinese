@@ -1,0 +1,2764 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yujinxiang Vocabulary · HSK 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* ================= BASE ================= */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:#FFFAF1;
+  color:#2C3A34;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px;
+  transition:background .3s, color .3s;
+}
+.zh, .zh *{
+  font-family:"Kaiti SC","STKaiti","KaiTi","楷体","Kaiti TC","Noto Serif SC","Songti SC",serif;
+}
+.zh .latin, .zh .latin *{
+  font-family:'Montserrat',sans-serif !important;
+}
+
+/* ================= HEADER ================= */
+.site-header{
+  position:relative;
+  background:linear-gradient(135deg,#DFFAEE 0%,#B4EDD4 40%,#8FDCC0 75%,#7ACFAF 100%);
+  padding:32px 24px 26px;
+  overflow:hidden;
+  transition:filter .3s;
+}
+.site-header::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255,255,255,.55), transparent 45%),
+    radial-gradient(circle at 88% 75%, rgba(255,255,255,.35), transparent 50%);
+  pointer-events:none;
+}
+.header-inner{
+  max-width:1060px;margin:0 auto;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:20px;
+  position:relative;z-index:2;
+}
+.brand h1{
+  margin:0 0 6px;
+  font-size:clamp(24px,3.6vw,38px);
+  font-weight:700;
+  letter-spacing:-.6px;
+  color:#1B4B37;
+  line-height:1.15;
+}
+.brand h1 em{
+  font-style:normal;
+  font-weight:500;
+  color:#2C7A57;
+  letter-spacing:-.3px;
+}
+.tagline{
+  margin:0;
+  font-size:13px;
+  font-weight:500;
+  color:#2F6B52;
+  letter-spacing:.4px;
+  opacity:.9;
+}
+.tagline b{ font-weight:700; }
+.tulip-art{
+  flex:0 0 auto;
+  filter:drop-shadow(0 8px 16px rgba(27,75,55,.15));
+  animation:sway 6s ease-in-out infinite;
+}
+@keyframes sway{
+  0%,100%{transform:rotate(-1.5deg)}
+  50%{transform:rotate(1.5deg)}
+}
+@media(max-width:640px){
+  .tulip-art svg{width:130px;height:auto}
+}
+
+/* ================= UNIT NAV ================= */
+.unit-nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,250,241,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #EDE1C9;
+  box-shadow:0 4px 18px -10px rgba(60,50,30,.35);
+  padding:10px 0;
+  transition:background .3s, border-color .3s;
+}
+.unit-list{
+  display:flex;gap:8px;
+  overflow-x:auto;
+  padding:4px 22px;
+  max-width:1060px;margin:0 auto;
+  scrollbar-width:thin;
+  scrollbar-color:#D9CBB0 transparent;
+}
+.unit-list::-webkit-scrollbar{height:6px}
+.unit-list::-webkit-scrollbar-thumb{background:#E2D6BC;border-radius:99px}
+.unit-btn{
+  flex:0 0 auto;
+  width:40px;height:40px;
+  border-radius:12px;
+  border:1.6px solid var(--b-line);
+  background:var(--b-soft);
+  color:var(--b-deep);
+  font-family:inherit;
+  font-weight:700;font-size:13px;
+  cursor:pointer;
+  transition:transform .18s, box-shadow .18s, background .18s;
+  position:relative;
+}
+.unit-btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px -8px rgba(0,0,0,.4)}
+.unit-btn.active{
+  background:var(--b-deep);
+  color:#fff;
+  border-color:var(--b-deep);
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px -8px rgba(0,0,0,.45);
+}
+.unit-btn.completed::after{
+  content:'';
+  position:absolute;
+  top:-2px;right:-2px;
+  width:10px;height:10px;
+  border-radius:50%;
+  background:#FFD166;
+  border:2px solid #fff;
+  box-shadow:0 0 0 1px #d0a835;
+}
+
+/* ================= MAIN ================= */
+main{
+  max-width:1060px;
+  margin:0 auto;
+  padding:28px 20px 40px;
+}
+
+/* ================= UNIT CARD ================= */
+.unit-card{
+  background:var(--uc-soft);
+  border:1.6px solid var(--uc-line);
+  border-radius:28px;
+  padding:clamp(18px,3vw,34px);
+  box-shadow:0 24px 60px -34px rgba(50,60,45,.5);
+  animation:fadeUp .4s ease both;
+  transition:background .3s, border-color .3s;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.unit-head{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+  padding-bottom:16px;
+  border-bottom:2px dashed var(--uc-line);
+  margin-bottom:18px;
+}
+.unit-kicker{
+  font-size:10.5px;letter-spacing:2.4px;text-transform:uppercase;
+  font-weight:700;color:var(--uc-deep);opacity:.65;
+}
+.unit-title{
+  margin:4px 0 0;
+  font-size:clamp(22px,3.2vw,30px);
+  font-weight:700;
+  color:var(--uc-deep);
+  line-height:1.25;
+}
+.unit-title-vi{
+  font-size:.58em;
+  font-weight:600;
+  opacity:.72;
+  margin-left:8px;
+  letter-spacing:.5px;
+}
+.unit-badge{
+  background:#fff;
+  border:1.5px solid var(--uc-line);
+  color:var(--uc-deep);
+  font-size:12.5px;
+  font-weight:600;
+  padding:6px 14px;
+  border-radius:999px;
+  white-space:nowrap;
+  transition:background .3s;
+}
+
+/* ================= PROGRESS BAR ================= */
+.progress-bar{
+  display:flex;align-items:center;gap:14px;
+  padding:10px 0 18px;
+  margin-bottom:20px;
+  border-bottom:1px dashed var(--uc-line);
+  flex-wrap:wrap;
+}
+.progress-track{
+  flex:1;
+  min-width:120px;
+  height:9px;
+  background:rgba(255,255,255,.65);
+  border:1px solid var(--uc-line);
+  border-radius:99px;
+  overflow:hidden;
+  position:relative;
+}
+.progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--uc-mid),var(--uc-deep));
+  border-radius:99px;
+  transition:width .5s ease;
+  width:0%;
+}
+.progress-label{
+  font-size:12.5px;font-weight:600;
+  color:var(--uc-deep);
+  white-space:nowrap;
+}
+.progress-label b{font-size:14px}
+
+/* ================= BLOCK ================= */
+.block{margin-bottom:34px}
+.block:last-child{margin-bottom:6px}
+.block-title{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-size:17px;font-weight:700;
+  color:var(--uc-deep);
+  margin:0 0 16px;
+}
+.block-title .badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border-radius:50%;
+  background:#fff;
+  border:1.5px solid var(--uc-line);
+  font-size:15px;
+  flex:0 0 auto;
+}
+.block-title .vi{
+  font-family:'Montserrat',sans-serif;
+  font-size:12.5px;
+  font-weight:500;
+  opacity:.68;
+  font-style:italic;
+}
+.title-speaker{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;
+  border-radius:50%;
+  background:#fff;
+  border:1.5px solid var(--uc-line);
+  cursor:pointer;
+  color:var(--uc-deep);
+  padding:0;
+  transition:transform .16s, box-shadow .16s, background .16s;
+  margin-left:4px;
+}
+.title-speaker:hover{
+  transform:translateY(-1px) scale(1.05);
+  box-shadow:0 6px 14px -8px rgba(0,0,0,.45);
+  background:var(--uc-mid);
+}
+.title-speaker svg{width:15px;height:15px}
+
+/* ================= WORD GRID ================= */
+.word-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(128px,1fr));
+  gap:10px;
+}
+.word-chip{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.78);
+  border:1px solid var(--uc-line);
+  border-radius:14px;
+  padding:9px 12px;
+  cursor:pointer;
+  transition:transform .18s, box-shadow .18s, background .18s;
+  user-select:none;
+}
+.word-chip:hover{
+  background:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 10px 22px -14px rgba(0,0,0,.55);
+}
+.word-chip:active{transform:translateY(0)}
+.w-idx{
+  font-size:10.5px;font-weight:700;
+  color:var(--uc-deep);opacity:.5;
+  min-width:15px;
+}
+.word-chip .zh{font-size:18px;font-weight:600;line-height:1.3;flex:1}
+.w-speaker{
+  width:15px;height:15px;
+  color:var(--uc-deep);
+  opacity:.42;
+  transition:opacity .18s, transform .18s;
+  flex:0 0 auto;
+}
+.word-chip:hover .w-speaker{opacity:1;transform:scale(1.08)}
+
+/* ================= NOTES ================= */
+.note{
+  background:rgba(255,255,255,.78);
+  border:1px solid var(--uc-line);
+  border-left:4px solid var(--uc-line);
+  border-radius:14px;
+  padding:14px 18px;
+  margin-bottom:12px;
+  transition:box-shadow .2s, transform .2s;
+}
+.note:hover{
+  box-shadow:0 12px 28px -20px rgba(0,0,0,.6);
+  transform:translateX(2px);
+}
+.note-head{
+  display:flex;align-items:baseline;flex-wrap:wrap;
+  gap:6px 10px;
+  margin-bottom:6px;
+}
+.note-idx{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:22px;height:22px;padding:0 6px;
+  border-radius:7px;
+  background:var(--uc-mid);
+  color:var(--uc-deep);
+  font-size:11.5px;font-weight:700;
+}
+.note-word{
+  font-size:21px;font-weight:700;
+  color:#1D2E26;
+  line-height:1.2;
+}
+.note-pinyin{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;font-weight:600;
+  color:var(--uc-deep);
+  background:var(--uc-soft);
+  border:1px solid var(--uc-line);
+  padding:0 9px;border-radius:7px;
+}
+.note-pos{
+  font-family:'Montserrat',sans-serif;
+  font-size:11.5px;font-style:italic;
+  color:#7C6A4E;
+  background:#F6EEDC;
+  padding:0 7px;border-radius:6px;
+}
+.note-vi{
+  font-family:'Montserrat',sans-serif;
+  font-size:13.5px;font-weight:500;
+  color:#3E5C4D;
+}
+.note-col{
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  font-size:14px;
+  color:#4A6B58;
+  margin:4px 0 2px;
+}
+.note-col .tag{
+  font-size:10.5px;font-weight:700;
+  letter-spacing:.6px;
+  background:#F6EEDC;color:#8A7350;
+  padding:1px 8px;border-radius:5px;
+}
+.note-ex{
+  list-style:none;margin:8px 0 0;padding:0;
+}
+.note-ex li{
+  position:relative;
+  padding-left:30px;
+  font-size:16px;
+  color:#2F3A34;
+  line-height:1.95;
+}
+.note-ex li + li{margin-top:4px}
+.note-ex .hl{
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+  text-underline-offset:4px;
+  text-decoration-color:var(--uc-line);
+  font-weight:700;
+  color:var(--uc-deep);
+}
+.note-ex .ex-text{ color:inherit; }
+.speak-btn{
+  position:absolute;
+  left:0;top:6px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;height:22px;
+  padding:0;
+  background:transparent;
+  border:1.5px solid var(--uc-line);
+  border-radius:50%;
+  cursor:pointer;
+  color:var(--uc-deep);
+  opacity:.55;
+  transition:opacity .16s, transform .16s, background .16s;
+}
+.speak-btn:hover{opacity:1;transform:scale(1.08);background:#fff}
+.speak-btn svg{width:11px;height:11px}
+.speak-btn:active{transform:scale(.95)}
+
+/* ================= EXERCISES ================= */
+.exercise{
+  background:rgba(255,255,255,.74);
+  border:1px solid var(--uc-line);
+  border-radius:18px;
+  padding:16px 18px 18px;
+  margin-bottom:16px;
+}
+.ex-title{
+  font-size:14.5px;
+  font-weight:700;
+  color:var(--uc-deep);
+  margin:0 0 3px;
+  line-height:1.6;
+}
+.ex-sub{
+  font-size:12.5px;
+  color:#77857D;
+  margin:0 0 14px;
+  font-style:italic;
+}
+.sub-block{
+  border-top:1px dashed #E7DFCD;
+  padding-top:14px;
+  margin-top:14px;
+}
+.sub-block:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.sub-label{
+  font-size:12.5px;font-weight:700;
+  color:#7B6C53;
+  letter-spacing:.4px;
+  margin-bottom:10px;
+}
+
+/* --- pinyin --- */
+.pinyin-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:10px;
+}
+.py-item{display:flex;flex-direction:column;gap:4px}
+.py-word{font-size:20px;font-weight:700;color:#1D2E26;line-height:1.2}
+.py-input{
+  font-family:'Montserrat',sans-serif;
+  font-size:13.5px;
+  padding:7px 10px;
+  border:1.5px solid #DFD6C2;
+  border-radius:10px;
+  background:#fff;
+  color:#2C3A34;
+  outline:none;
+  transition:.18s;
+  width:100%;
+}
+.py-input::placeholder{color:#C3B9A4;font-style:italic}
+.py-input:focus{
+  border-color:var(--uc-line);
+  box-shadow:0 0 0 3px var(--uc-soft);
+}
+.py-input.ok{border-color:#3DBE7C;background:#EEFBF3}
+.py-input.no{border-color:#E86A6A;background:#FFF1F1}
+.py-fb{
+  font-family:'Montserrat',sans-serif;
+  font-size:11.5px;min-height:15px;color:#C0504D;font-weight:600;
+}
+
+/* --- matching --- */
+.match-wrap{
+  display:grid;
+  grid-template-columns:1fr 1.35fr;
+  gap:12px;
+}
+@media(max-width:640px){.match-wrap{grid-template-columns:1fr}}
+.match-col{display:flex;flex-direction:column;gap:8px}
+.match-item{
+  font-family:'Montserrat',sans-serif;
+  text-align:left;
+  padding:9px 14px;
+  border-radius:12px;
+  border:1.5px solid #DFD6C2;
+  background:#fff;
+  cursor:pointer;
+  font-size:13.5px;
+  color:#2C3A34;
+  transition:transform .16s, background .16s, border-color .16s;
+  line-height:1.5;
+}
+.match-item:hover{border-color:var(--uc-line);background:var(--uc-soft)}
+.match-item.sel{
+  border-color:var(--uc-deep);
+  background:var(--uc-mid);
+  box-shadow:0 0 0 3px var(--uc-soft);
+  transform:translateY(-1px);
+}
+.match-item.matched{
+  border-color:#3DBE7C;
+  background:#EDFAF2;
+  color:#22794F;
+  cursor:default;
+  opacity:.9;
+}
+.match-item.wrong{
+  border-color:#E86A6A;background:#FFEFEF;
+  animation:shake .35s;
+}
+@keyframes shake{
+  0%,100%{transform:translateX(0)}
+  25%{transform:translateX(-5px)}
+  75%{transform:translateX(5px)}
+}
+#matchLeft .match-item .zh{font-size:18px;font-weight:700}
+.match-status{
+  margin-top:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:12.5px;font-weight:600;
+  color:#7B6C53;
+}
+
+/* --- fill in blank --- */
+.fill-group{
+  border-top:1px dashed #E7DFCD;
+  padding-top:14px;
+  margin-top:14px;
+}
+.fill-group:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.fill-options{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-bottom:12px;
+  padding:9px 11px;
+  background:var(--uc-soft);
+  border-radius:12px;
+}
+.opt-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#fff;
+  border:1px solid var(--uc-line);
+  border-radius:999px;
+  padding:2px 12px;
+  font-size:13.5px;
+}
+.opt-pill b{color:var(--uc-deep);font-size:11.5px}
+.fill-list{margin:0;padding-left:22px}
+.fill-list li{margin-bottom:9px;font-size:15px;line-height:2.1}
+.fill-select{
+  font-family:"Kaiti SC","STKaiti","KaiTi","楷体",serif;
+  font-size:15px;
+  padding:2px 8px;
+  border-radius:8px;
+  border:1.5px solid #D9D0BD;
+  background:#fff;
+  color:#2C3A34;
+  cursor:pointer;
+  margin:0 3px;
+  outline:none;
+  transition:.16s;
+}
+.fill-select:hover{border-color:var(--uc-line)}
+.fill-select.ok{border-color:#3DBE7C;background:#EDFAF2;color:#22794F}
+.fill-select.no{border-color:#E86A6A;background:#FFEFEF;color:#C0504D}
+
+/* --- multiple choice --- */
+.mc-list{margin:0;padding-left:22px}
+.mc-item{margin-bottom:15px}
+.mc-q{font-size:16px;line-height:1.9;margin-bottom:8px;color:#25372D}
+.mc-opts{display:flex;flex-wrap:wrap;gap:8px}
+.mc-opt{
+  font-family:inherit;
+  font-size:13.5px;
+  padding:5px 14px;
+  border-radius:10px;
+  border:1.5px solid #DFD6C2;
+  background:#fff;
+  cursor:pointer;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:transform .16s, background .16s, border-color .16s;
+  color:#2C3A34;
+}
+.mc-opt b{color:#A3937A;font-size:11.5px}
+.mc-opt:hover{border-color:var(--uc-line);background:var(--uc-soft);transform:translateY(-1px)}
+.mc-opt.sel{border-color:var(--uc-deep);background:var(--uc-mid)}
+.mc-opt.ok{border-color:#3DBE7C;background:#EDFAF2}
+.mc-opt.ok b{color:#22794F}
+.mc-opt.no{border-color:#E86A6A;background:#FFEFEF}
+.mc-opt.no b{color:#C0504D}
+
+/* --- buttons --- */
+.btn-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
+.btn{
+  font-family:inherit;
+  font-size:13.5px;font-weight:600;
+  padding:8px 20px;
+  border-radius:11px;
+  border:none;
+  cursor:pointer;
+  background:var(--uc-deep);
+  color:#fff;
+  transition:transform .16s, filter .16s, box-shadow .16s;
+  letter-spacing:.2px;
+}
+.btn:hover{filter:brightness(1.12);transform:translateY(-1px);box-shadow:0 8px 18px -12px rgba(0,0,0,.9)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{
+  background:transparent;
+  color:var(--uc-deep);
+  border:1.5px solid var(--uc-line);
+}
+.btn.ghost:hover{background:var(--uc-soft)}
+.btn.small{padding:6px 15px;font-size:12.5px}
+
+/* ================= FLOATING BUTTONS ================= */
+.float-btn{
+  position:fixed;
+  width:52px;height:52px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 26px -10px rgba(0,0,0,.4);
+  transition:transform .2s, box-shadow .2s, background .3s;
+  z-index:100;
+  background:#fff;
+  color:var(--uc-deep, #2C7A57);
+}
+.float-btn:hover{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 16px 32px -12px rgba(0,0,0,.5);
+}
+.float-btn svg{width:24px;height:24px}
+
+#flowerBtn{
+  top:22px;right:22px;
+  background:linear-gradient(135deg,#FFF1F8,#FAD6E8);
+  position:fixed;
+  border:2px solid #fff;
+}
+#flowerBtn .count-badge{
+  position:absolute;
+  top:-4px;right:-4px;
+  background:#E86A6A;
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  border-radius:99px;
+  padding:2px 7px;
+  border:2px solid #fff;
+  min-width:22px;
+  text-align:center;
+}
+
+#themeBtn{
+  bottom:22px;left:22px;
+  background:#FFF8E1;
+  border:2px solid #fff;
+}
+body.dark #themeBtn{
+  background:#2A2E2A;
+  color:#FFE082;
+  border-color:#3a3e3a;
+}
+
+/* ================= FLOWER PANEL ================= */
+.flower-panel{
+  position:fixed;
+  top:84px;right:22px;
+  width:min(420px, calc(100vw - 44px));
+  max-height:calc(100vh - 110px);
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 30px 80px -20px rgba(0,0,0,.4);
+  border:1.5px solid #EDE1C9;
+  z-index:99;
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+}
+.flower-panel.open{ display:flex; }
+.flower-panel-head{
+  padding:18px 22px 14px;
+  background:linear-gradient(135deg,#FFF1F8,#FCE4EF);
+  border-bottom:1px solid #F4D6E5;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;
+}
+.flower-panel-head h3{
+  margin:0;
+  font-size:17px;
+  font-weight:700;
+  color:#8A2C5A;
+  display:flex;align-items:center;gap:8px;
+}
+.flower-panel-head .collect-count{
+  font-size:12.5px;
+  font-weight:600;
+  background:#fff;
+  color:#8A2C5A;
+  padding:4px 12px;
+  border-radius:99px;
+  border:1px solid #F4D6E5;
+}
+.close-panel{
+  background:none;border:none;
+  width:30px;height:30px;
+  cursor:pointer;
+  color:#8A2C5A;
+  font-size:20px;
+  border-radius:8px;
+  transition:background .15s;
+  display:flex;align-items:center;justify-content:center;
+  padding:0;
+}
+.close-panel:hover{background:rgba(255,255,255,.7)}
+
+.flower-panel-sub{
+  padding:10px 22px;
+  font-size:12px;
+  color:#8A7350;
+  background:#FFFDF7;
+  border-bottom:1px solid #F6EEDC;
+  font-style:italic;
+}
+
+.flower-grid{
+  flex:1;
+  overflow-y:auto;
+  padding:16px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(84px,1fr));
+  gap:10px;
+  background:#FFFCF5;
+}
+.flower-slot{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  padding:8px 4px;
+  border-radius:14px;
+  background:#fff;
+  border:1.5px solid #EDE1C9;
+  cursor:pointer;
+  transition:transform .16s, box-shadow .16s, background .16s;
+  position:relative;
+}
+.flower-slot.locked{
+  background:#F6F2E9;
+  border-style:dashed;
+  opacity:.65;
+}
+.flower-slot.locked .flower-emoji{ filter:grayscale(1); opacity:.4; }
+.flower-slot.locked .flower-name{ color:#B5A98F; }
+.flower-slot.unlocked:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 22px -12px rgba(0,0,0,.35);
+  background:#FFF8FA;
+}
+.flower-slot .slot-idx{
+  position:absolute;
+  top:4px;left:6px;
+  font-size:9.5px;
+  font-weight:700;
+  color:#C4B69A;
+}
+.flower-slot .flower-emoji{ line-height:1; }
+.flower-slot .flower-name{
+  font-size:11.5px;
+  font-weight:600;
+  color:#6B5B42;
+  text-align:center;
+  line-height:1.2;
+}
+.flower-slot .flower-emoji.small{ font-size:22px; }
+
+/* flower detail modal */
+.flower-detail{
+  position:fixed;
+  inset:0;
+  background:rgba(20,20,20,.55);
+  z-index:200;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  backdrop-filter:blur(4px);
+}
+.flower-detail.open{ display:flex; }
+.flower-detail-card{
+  background:#fff;
+  border-radius:24px;
+  padding:30px 32px;
+  max-width:380px;
+  width:100%;
+  text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+  animation:popIn .3s ease both;
+  position:relative;
+}
+@keyframes popIn{
+  from{opacity:0;transform:scale(.92)}
+  to{opacity:1;transform:scale(1)}
+}
+.flower-detail-card .big-flower{ font-size:64px; line-height:1; margin-bottom:10px; }
+.flower-detail-card h4{
+  margin:0 0 4px;
+  font-size:22px;
+  color:#8A2C5A;
+}
+.flower-detail-card .detail-meaning{
+  font-size:14px;
+  color:#6B5B42;
+  font-style:italic;
+  margin:0 0 18px;
+}
+.flower-detail-card .detail-unit{
+  display:inline-block;
+  font-size:12px;
+  background:#FCE4EF;
+  color:#8A2C5A;
+  padding:4px 14px;
+  border-radius:99px;
+  font-weight:600;
+}
+.flower-detail-close{
+  position:absolute;
+  top:10px;right:12px;
+  background:none;border:none;
+  font-size:22px;
+  cursor:pointer;
+  color:#aaa;
+  width:32px;height:32px;
+  border-radius:8px;
+}
+.flower-detail-close:hover{background:#f5f5f5;color:#666}
+
+/* ================= TOAST ================= */
+.toast{
+  position:fixed;
+  top:90px;
+  left:50%;
+  transform:translate(-50%,-20px);
+  background:#fff;
+  border:2px solid #FFD166;
+  border-radius:18px;
+  padding:14px 22px;
+  box-shadow:0 24px 60px -20px rgba(0,0,0,.45);
+  z-index:300;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .35s, transform .35s;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  max-width:min(420px, calc(100vw - 40px));
+}
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+.toast .toast-flower{
+  font-size:34px;line-height:1;flex:0 0 auto;
+}
+.toast .toast-body{flex:1;min-width:0}
+.toast .toast-title{
+  font-size:13px;font-weight:700;
+  color:#8A2C5A;
+  margin:0 0 2px;
+}
+.toast .toast-name{
+  font-size:15px;font-weight:700;
+  color:#4A2C3C;
+  margin:0;
+}
+.toast .toast-meaning{
+  font-size:12px;
+  color:#9A8578;
+  margin:2px 0 0;
+  font-style:italic;
+}
+
+/* ================= FOOTER ================= */
+.site-footer{
+  text-align:center;
+  font-size:12px;
+  color:#A7967A;
+  padding:10px 20px 0;
+  letter-spacing:.5px;
+}
+.site-footer b{color:#7E6D51;font-weight:700}
+
+/* ================= DARK MODE ================= */
+body.dark{
+  background:#1B1D1B;
+  color:#D8D8D8;
+}
+body.dark .site-header{ filter:brightness(.82) saturate(.85); }
+body.dark .unit-nav{
+  background:rgba(27,29,27,.95);
+  border-bottom-color:#2E322E;
+}
+body.dark .unit-btn{ filter:brightness(.85); }
+body.dark .unit-btn.active{ filter:none; }
+body.dark .unit-card{
+  background:#252825 !important;
+  border-color:#3A3E3A !important;
+}
+body.dark .unit-head,
+body.dark .progress-bar{ border-bottom-color:#3A3E3A; }
+body.dark .progress-track{
+  background:rgba(255,255,255,.08);
+  border-color:#3A3E3A;
+}
+body.dark .progress-label{ color:#C9D0C9; }
+body.dark .unit-title{ color:#E8E8E8; }
+body.dark .unit-kicker{ color:#8A948A; }
+body.dark .unit-badge{
+  background:#2E322E;
+  border-color:#3A3E3A;
+  color:#D0D0D0;
+}
+body.dark .word-chip,
+body.dark .note,
+body.dark .exercise,
+body.dark .match-item,
+body.dark .mc-opt,
+body.dark .py-input,
+body.dark .fill-select,
+body.dark .opt-pill,
+body.dark .title-speaker,
+body.dark .fill-options,
+body.dark .block-title .badge{
+  background:#2D3130 !important;
+  border-color:#3E4240 !important;
+  color:#D8D8D8;
+}
+body.dark .word-chip:hover,
+body.dark .match-item:hover,
+body.dark .mc-opt:hover{
+  background:#343834 !important;
+}
+body.dark .word-chip .zh,
+body.dark .note-word,
+body.dark .py-word,
+body.dark .mc-q,
+body.dark .note-ex li,
+body.dark .note-vi{
+  color:#E8E8E8 !important;
+}
+body.dark .note-pinyin{
+  background:#343834;
+  border-color:#3E4240;
+  color:#D8E0D8;
+}
+body.dark .note-pos{
+  background:#3A3428;
+  color:#D8C8A0;
+}
+body.dark .note-col{ color:#A8B0A8; }
+body.dark .note-col .tag{ background:#3A3428; color:#C8B888; }
+body.dark .note-ex .ex-text{ color:#D8D8D8; }
+body.dark .note-ex .hl{
+  color:var(--uc-mid);
+  text-decoration-color:var(--uc-mid);
+}
+body.dark .speak-btn{ color:#B8C0B8; border-color:#4A4E4A; }
+body.dark .speak-btn:hover{ background:#343834; }
+body.dark .sub-label,
+body.dark .ex-sub,
+body.dark .match-status,
+body.dark .py-fb,
+body.dark .site-footer{
+  color:#8A948A !important;
+}
+body.dark .fill-options{ background:#2D3130 !important; }
+body.dark .opt-pill{ background:#343834 !important; }
+body.dark .opt-pill b{ color:#A0A8A0 !important; }
+body.dark .btn.ghost{
+  color:#D8D8D8 !important;
+  border-color:#3E4240 !important;
+}
+body.dark .btn.ghost:hover{ background:#343834 !important; }
+body.dark .flower-panel{
+  background:#252825;
+  border-color:#3A3E3A;
+}
+body.dark .flower-panel-head{
+  background:linear-gradient(135deg,#2E2A30,#2A2430);
+  border-bottom-color:#3A2E3A;
+}
+body.dark .flower-panel-head h3{ color:#F0B8D8; }
+body.dark .flower-panel-head .collect-count{
+  background:#3A2E3A;
+  color:#F0B8D8;
+  border-color:#4A3E4A;
+}
+body.dark .flower-panel-sub{
+  background:#2A2A2A;
+  color:#A89888;
+  border-bottom-color:#3A3A3A;
+}
+body.dark .flower-grid{ background:#252825; }
+body.dark .flower-slot{
+  background:#2E3230;
+  border-color:#3E4240;
+}
+body.dark .flower-slot.locked{ background:#2A2D2A; }
+body.dark .flower-slot .flower-name{ color:#C8C0B0; }
+body.dark .flower-detail-card{ background:#2A2D2A; }
+body.dark .flower-detail-card h4{ color:#F0B8D8; }
+body.dark .flower-detail-card .detail-meaning{ color:#C8C0B0; }
+body.dark .toast{
+  background:#2A2D2A;
+  border-color:#F0B8D8;
+}
+body.dark .toast .toast-name{ color:#F8E8F0; }
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:640px){
+  #flowerBtn{ top:16px; right:16px; width:46px; height:46px; }
+  #themeBtn{ bottom:16px; left:16px; width:46px; height:46px; }
+  .flower-panel{ top:70px; right:16px; left:16px; width:auto; }
+  .unit-card{ border-radius:22px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <h1>Yujinxiang <em>Vocabulary</em></h1>
+      <p class="tagline">HSK 6 · <b>词汇速记速练</b> · Từ vựng HSK 6 luyện tập theo từng bài</p>
+    </div>
+    <div class="tulip-art">
+      <svg width="200" height="150" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(45,95) scale(0.85)">
+          <path d="M0,0 L0,60" stroke="#4CAF7D" stroke-width="5" stroke-linecap="round"/>
+          <path d="M0,42 C-20,32 -34,36 -42,20 C-26,12 -8,22 0,42 Z" fill="#66C99A"/>
+          <path d="M0,50 C20,40 34,44 42,28 C26,20 8,30 0,50 Z" fill="#4CAF7D"/>
+          <path d="M-22,-45 C-34,-25 -28,-4 0,0 C28,-4 34,-25 22,-45 C14,-30 -14,-30 -22,-45 Z" fill="#FF9EB5"/>
+          <path d="M-22,-45 C-30,-28 -22,-8 0,0 C-14,-14 -22,-30 -22,-45 Z" fill="#FFB8C9" opacity=".75"/>
+        </g>
+        <g transform="translate(110,90) scale(1)">
+          <path d="M0,0 L0,60" stroke="#4CAF7D" stroke-width="5" stroke-linecap="round"/>
+          <path d="M0,38 C-22,28 -36,32 -44,14 C-26,6 -8,16 0,38 Z" fill="#66C99A"/>
+          <path d="M0,48 C22,38 36,42 44,24 C26,16 8,26 0,48 Z" fill="#4CAF7D"/>
+          <path d="M-22,-45 C-34,-25 -28,-4 0,0 C28,-4 34,-25 22,-45 C14,-30 -14,-30 -22,-45 Z" fill="#FFD166"/>
+          <path d="M-22,-45 C-30,-28 -22,-8 0,0 C-14,-14 -22,-30 -22,-45 Z" fill="#FFE29A" opacity=".8"/>
+        </g>
+        <g transform="translate(175,98) scale(0.8)">
+          <path d="M0,0 L0,60" stroke="#4CAF7D" stroke-width="5" stroke-linecap="round"/>
+          <path d="M0,40 C-20,30 -32,34 -40,18 C-24,10 -8,20 0,40 Z" fill="#66C99A"/>
+          <path d="M0,48 C20,38 32,42 40,26 C24,18 8,28 0,48 Z" fill="#4CAF7D"/>
+          <path d="M-22,-45 C-34,-25 -28,-4 0,0 C28,-4 34,-25 22,-45 C14,-30 -14,-30 -22,-45 Z" fill="#C9A7E8"/>
+          <path d="M-22,-45 C-30,-28 -22,-8 0,0 C-14,-14 -22,-30 -22,-45 Z" fill="#DCC4F2" opacity=".8"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= NAV ================= -->
+<nav class="unit-nav">
+  <div class="unit-list" id="unitList"></div>
+</nav>
+
+<!-- ================= MAIN ================= -->
+<main id="app"></main>
+
+<footer class="site-footer">Yujinxiang Vocabulary · <b>HSK 6 词汇速记速练</b> · 57 单元</footer>
+
+<!-- ================= FLOATING BUTTONS ================= -->
+<button id="flowerBtn" class="float-btn" title="Sổ sưu tập hoa" onclick="toggleFlowerPanel()">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#8A2C5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="2.2"/>
+    <path d="M12 5.5C12 3 14 2 15 3.5s0 3-1.5 3.5"/>
+    <path d="M14.5 8c2.5 0 3.5 2 2 3s-3 0-3.5-1.5"/>
+    <path d="M14 10.5c0 2.5-2 3.5-3 2s0-3 1.5-3.5"/>
+    <path d="M9.5 10c-2.5 0-3.5-2-2-3s3 0 3.5 1.5"/>
+    <path d="M10 7.5c0-2.5 2-3.5 3-2s0 3-1.5 3.5"/>
+    <path d="M12 12v6"/>
+    <path d="M9 21c0-2 1.5-3 3-3s3 1 3 3"/>
+  </svg>
+  <span class="count-badge" id="flowerCount">0</span>
+</button>
+
+<button id="themeBtn" class="float-btn" title="Chế độ sáng / tối" onclick="toggleTheme()">
+  <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"/>
+    <line x1="12" y1="1" x2="12" y2="3"/>
+    <line x1="12" y1="21" x2="12" y2="23"/>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+    <line x1="1" y1="12" x2="3" y2="12"/>
+    <line x1="21" y1="12" x2="23" y2="12"/>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+  </svg>
+</button>
+
+<!-- ================= FLOWER PANEL ================= -->
+<div class="flower-panel" id="flowerPanel">
+  <div class="flower-panel-head">
+    <h3>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A2C5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="2.2"/>
+        <path d="M12 5.5C12 3 14 2 15 3.5s0 3-1.5 3.5"/>
+        <path d="M14.5 8c2.5 0 3.5 2 2 3s-3 0-3.5-1.5"/>
+        <path d="M14 10.5c0 2.5-2 3.5-3 2s0-3 1.5-3.5"/>
+        <path d="M9.5 10c-2.5 0-3.5-2-2-3s3 0 3.5 1.5"/>
+        <path d="M10 7.5c0-2.5 2-3.5 3-2s0 3-1.5 3.5"/>
+        <path d="M12 12v6"/>
+        <path d="M9 21c0-2 1.5-3 3-3s3 1 3 3"/>
+      </svg>
+      Sổ sưu tập hoa
+    </h3>
+    <span class="collect-count" id="collectCount">0 / 57</span>
+    <button class="close-panel" onclick="toggleFlowerPanel()">✕</button>
+  </div>
+  <div class="flower-panel-sub">Hoàn thành mỗi 单元 để nhận một loài hoa mới</div>
+  <div class="flower-grid" id="flowerGrid"></div>
+</div>
+
+<!-- ================= FLOWER DETAIL MODAL ================= -->
+<div class="flower-detail" id="flowerDetail" onclick="closeFlowerDetail(event)">
+  <div class="flower-detail-card" onclick="event.stopPropagation()">
+    <button class="flower-detail-close" onclick="closeFlowerDetail()">✕</button>
+    <div class="big-flower" id="fdEmoji">🌷</div>
+    <h4 id="fdName">Tên hoa</h4>
+    <p class="detail-meaning" id="fdMeaning">Ý nghĩa</p>
+    <span class="detail-unit" id="fdUnit">Bài 1</span>
+  </div>
+</div>
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast">
+  <div class="toast-flower" id="toastFlower">🌷</div>
+  <div class="toast-body">
+    <p class="toast-title">🎉 Chúc mừng! Bạn đã hoàn thành 单元 này</p>
+    <p class="toast-name" id="toastName">Tên hoa</p>
+    <p class="toast-meaning" id="toastMeaning">Ý nghĩa</p>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   1. 单元数量 + 调色板
+   ========================================================= */
+const UNIT_COUNT = 57;
+
+function unitPalette(i){
+  const t = i / (UNIT_COUNT - 1);
+  const hue = (340 + t * 290) % 360;
+  return {
+    soft: `hsl(${hue.toFixed(0)}, 72%, ${(94 - t * 11).toFixed(1)}%)`,
+    mid:  `hsl(${hue.toFixed(0)}, 68%, ${(87.5 - t * 13).toFixed(1)}%)`,
+    line: `hsl(${hue.toFixed(0)}, 55%, ${(80 - t * 18).toFixed(1)}%)`,
+    deep: `hsl(${hue.toFixed(0)}, 46%, ${(48 - t * 7).toFixed(1)}%)`
+  };
+}
+
+/* =========================================================
+   2. 花朵数据（57种）
+   ========================================================= */
+const FLOWERS = [
+  { name:'郁金香', meaning:'爱的表白',     emoji:'🌷' },
+  { name:'玫瑰',   meaning:'热情真爱',     emoji:'🌹' },
+  { name:'樱花',   meaning:'生命之美',     emoji:'🌸' },
+  { name:'向日葵', meaning:'忠诚与希望',   emoji:'🌻' },
+  { name:'莲花',   meaning:'纯洁的心灵',   emoji:'🪷' },
+  { name:'百合',   meaning:'百年好合',     emoji:'🌺' },
+  { name:'康乃馨', meaning:'母爱的温暖',   emoji:'🌼' },
+  { name:'雏菊',   meaning:'天真纯洁',     emoji:'🌼' },
+  { name:'菊花',   meaning:'高洁坚贞',     emoji:'🏵️' },
+  { name:'梅花',   meaning:'坚强不屈',     emoji:'🌸' },
+  { name:'牡丹',   meaning:'富贵吉祥',     emoji:'🌺' },
+  { name:'兰花',   meaning:'高雅幽远',     emoji:'🌷' },
+  { name:'桂花',   meaning:'芬芳吉祥',     emoji:'🌼' },
+  { name:'山茶花', meaning:'理想的爱',     emoji:'🌺' },
+  { name:'杜鹃花', meaning:'永远属于你',   emoji:'🌸' },
+  { name:'水仙',   meaning:'自尊自爱',     emoji:'🌼' },
+  { name:'紫罗兰', meaning:'永恒之美',     emoji:'💜' },
+  { name:'勿忘我', meaning:'永恒的记忆',   emoji:'💙' },
+  { name:'薰衣草', meaning:'等待爱情',     emoji:'💜' },
+  { name:'满天星', meaning:'真心喜欢',     emoji:'🤍' },
+  { name:'桔梗花', meaning:'永恒的爱',     emoji:'💜' },
+  { name:'茉莉花', meaning:'亲切喜爱',     emoji:'🤍' },
+  { name:'栀子花', meaning:'喜悦暗恋',     emoji:'🤍' },
+  { name:'木兰花', meaning:'高尚的灵魂',   emoji:'🌸' },
+  { name:'迎春花', meaning:'希望与新生',   emoji:'🌼' },
+  { name:'杏花',   meaning:'少女的慕情',   emoji:'🌸' },
+  { name:'桃花',   meaning:'爱情的俘虏',   emoji:'🌸' },
+  { name:'梨花',   meaning:'纯洁的心',     emoji:'🤍' },
+  { name:'丁香花', meaning:'光辉与希望',   emoji:'💜' },
+  { name:'风信子', meaning:'重生的爱',     emoji:'💙' },
+  { name:'三色堇', meaning:'快乐思念',     emoji:'💜' },
+  { name:'波斯菊', meaning:'纯真的心',     emoji:'🌼' },
+  { name:'石竹花', meaning:'纯洁的爱',     emoji:'🌸' },
+  { name:'芍药',   meaning:'依依惜别',     emoji:'🌺' },
+  { name:'海棠花', meaning:'苦恋思念',     emoji:'🌸' },
+  { name:'含笑花', meaning:'含蓄的喜悦',   emoji:'🌼' },
+  { name:'木棉花', meaning:'珍惜身边人',   emoji:'🌺' },
+  { name:'芙蓉花', meaning:'纯洁之美',     emoji:'🌸' },
+  { name:'蔷薇',   meaning:'美好的爱情',   emoji:'🌹' },
+  { name:'金银花', meaning:'真诚的爱',     emoji:'🌼' },
+  { name:'昙花',   meaning:'刹那的美丽',   emoji:'🤍' },
+  { name:'蝴蝶兰', meaning:'幸福飞来',     emoji:'🦋' },
+  { name:'跳舞兰', meaning:'隐藏的爱',     emoji:'🌺' },
+  { name:'马蹄莲', meaning:'忠贞不渝',     emoji:'🌷' },
+  { name:'忘忧草', meaning:'忘掉忧愁',     emoji:'🌼' },
+  { name:'蒲公英', meaning:'无法停留的爱', emoji:'🌾' },
+  { name:'大丽花', meaning:'大方富丽',     emoji:'🌺' },
+  { name:'报春花', meaning:'青春的喜悦',   emoji:'🌼' },
+  { name:'鸢尾花', meaning:'优美光明',     emoji:'💜' },
+  { name:'木槿花', meaning:'温柔的坚持',   emoji:'🌸' },
+  { name:'白兰花', meaning:'纯洁的爱',     emoji:'🤍' },
+  { name:'仙人掌花', meaning:'坚强等待',   emoji:'🌵' },
+  { name:'桔子花', meaning:'吉祥如意',     emoji:'🍊' },
+  { name:'紫薇花', meaning:'沉迷的爱',     emoji:'💜' },
+  { name:'萱草',   meaning:'隐藏的爱',     emoji:'🌼' },
+  { name:'曼陀罗', meaning:'不可预知',     emoji:'🌺' },
+  { name:'扶桑花', meaning:'新鲜的爱',     emoji:'🌺' }
+];
+
+/* =========================================================
+   3. 数据
+   ========================================================= */
+const UNIT_DATA = {
+  1: {
+    vi: "Bài 1",
+    words: [
+      "挨着","挨","挨打","安检","罢工",
+      "罢了","白领","百分点","办公","办事处",
+      "办学","半决赛","傍晚","保健","报刊",
+      "报考","抱歉","暴风雨","暴力","暴露"
+    ],
+    notes: [
+      { w:"挨着", p:"āizhe", pos:"动", vi:"gần bên, sát bên", col:"",
+        ex:["树上的叶子一片一片紧挨着，看上去就像一把巨大的伞。",
+            "道路两旁多是两至三层的小楼，商店、饭馆一家挨着一家。"] },
+      { w:"挨", p:"ái", pos:"动", vi:"chịu đựng, bị; kéo dài / lãng phí (thời gian)", col:"挨骂；挨饿",
+        ex:["只要挨过这段苦日子，生活一定会好起来的。",
+            "不要挨时间了，没有人会来救你的。"] },
+      { w:"挨打", p:"áidǎ", pos:"动", vi:"bị đánh, ăn đòn", col:"",
+        ex:["你脸怎么了？挨打了？",
+            "我从没挨过打，我父母认为讲道理是最重要的。"] },
+      { w:"安检", p:"ānjiǎn", pos:"动", vi:"kiểm tra an toàn", col:"",
+        ex:["乘客上飞机前要经过安检。",
+            "考生必须通过安检才能进入高考（gāokǎo, kỳ thi đầu vào đại học/cao đẳng）考场。"] },
+      { w:"罢工", p:"bàgōng", pos:"动", vi:"bãi công, đình công", col:"",
+        ex:["单纯组织罢工是没有办法解决问题的，双方应该坐下来好好谈谈。",
+            "他们罢了多长时间的工？"] },
+      { w:"罢了", p:"bàle", pos:"助", vi:"mà thôi, thì thôi", col:"",
+        ex:["你们别乱说啊，他们俩只是好朋友罢了。",
+            "什么老板不老板的，我跟你们一样都只是打工的罢了。"] },
+      { w:"白领", p:"báilǐng", pos:"名", vi:"người làm công việc lao động trí óc", col:"",
+        ex:["李红去年在北京旅行的时候认识了一个在酒店当经理的白领。",
+            "大学毕业后，他进了一家贸易公司，成了这个城市里千千万万普通白领中的一员。"] },
+      { w:"百分点", p:"bǎifēndiǎn", pos:"名", vi:"điểm phần trăm", col:"",
+        ex:["7月的失业率（lù, tỷ lệ）比6月下降了0.5个百分点。",
+            "今年我校毕业生的就业率比去年上升了2个百分点。"] },
+      { w:"办公", p:"bàn gōng", pos:"动", vi:"làm việc (trong văn phòng), xử lý việc công", col:"办公环境；移动办公",
+        ex:["除非有特殊情况，经理一般不会在家办公。",
+            "王经理曾经在这间小办公室里办过三年公。"] },
+      { w:"办事处", p:"bànshìchù", pos:"名", vi:"văn phòng (nơi giải quyết công việc đối ngoại)", col:"",
+        ex:["新办事处的经营由李经理负责。",
+            "我们公司在很多城市都有办事处。"] },
+      { w:"办学", p:"bànxué", pos:"动", vi:"mở / thành lập trường", col:"合作办学",
+        ex:["各个国家都有自己的办学模式。",
+            "为了更好地服务学生，教育部门努力改善学校的办学条件。"] },
+      { w:"半决赛", p:"bànjuésài", pos:"名", vi:"vòng bán kết", col:"",
+        ex:["世界杯半决赛将在本月23日进行。",
+            "羽毛球男女团体赛半决赛已在10日晚全部结束。"] },
+      { w:"傍晚", p:"bàngwǎn", pos:"名", vi:"chạng vạng, chập tối", col:"",
+        ex:["我们一直等到傍晚才出发。",
+            "由几位著名艺术家联合举办的展览活动将在30日傍晚开幕。"] },
+      { w:"保健", p:"bǎojiàn", pos:"动/名", vi:"bảo vệ sức khỏe, chăm sóc sức khỏe", col:"保健操；保健工作",
+        ex:["医疗保健事业的健康发展需要政府的积极引导。",
+            "这本书分为“老年生活”和“老年保健”两大部分。"] },
+      { w:"报刊", p:"bàokān", pos:"名", vi:"báo chí", col:"",
+        ex:["全国平均每百人订有报刊17.4份。",
+            "省图书馆目前有各类报刊2000多种。"] },
+      { w:"报考", p:"bàokǎo", pos:"动", vi:"ghi danh dự thi", col:"",
+        ex:["今年全国报考硕士研究生的人数有400多万。",
+            "这孩子从小学习成绩就好，就算报考最好的大学也是很有希望上的。"] },
+      { w:"抱歉", p:"bàoqiàn", pos:"形", vi:"xin lỗi, có lỗi, hối tiếc", col:"",
+        ex:["很抱歉，这件事我帮不上你。",
+            "他为自己没有调查清楚就乱批评人感到抱歉。"] },
+      { w:"暴风雨", p:"bàofēngyǔ", pos:"名", vi:"bão tố, bão", col:"",
+        ex:["暴风雨就要来了。",
+            "昨日夜间的暴风雨导致我市大面积停电（tíngdiàn, cúp điện）。"] },
+      { w:"暴力", p:"bàolì", pos:"名", vi:"bạo lực", col:"",
+        ex:["这部电影的主题是反对暴力和战争。",
+            "面对暴力，我们要勇敢说“不”，并拿起法律武器。"] },
+      { w:"暴露", p:"bàolù", pos:"动", vi:"bộc lộ, để lộ, vạch trần, tiết lộ", col:"暴露问题；暴露目标",
+        ex:["我们要让这些问题暴露在阳光下。",
+            "一个人听什么歌往往会暴露他的年龄。"] }
+    ],
+    ex1: [
+      { w:"挨着",   p:"āizhe",     def:"gần bên, sát bên" },
+      { w:"安检",   p:"ānjiǎn",    def:"kiểm tra an toàn" },
+      { w:"罢工",   p:"bàgōng",    def:"bãi công, đình công" },
+      { w:"白领",   p:"báilǐng",   def:"người làm công việc lao động trí óc" },
+      { w:"暴露",   p:"bàolù",     def:"bộc lộ, để lộ, vạch trần, tiết lộ" },
+      { w:"报刊",   p:"bàokān",    def:"báo chí" },
+      { w:"傍晚",   p:"bàngwǎn",   def:"chạng vạng, chập tối" },
+      { w:"半决赛", p:"bànjuésài", def:"vòng bán kết" }
+    ],
+    ex2: [
+      { options:["挨着","罢了","办学","报考","罢工"],
+        items:[
+          { text:"这些根本不是事实，都只不过是没有根据的猜测____。", answer:"罢了" },
+          { text:"李校长在会上总结了我校 30 年的____经验，并对学校未来的发展方向做了深入的分析。", answer:"办学" },
+          { text:"天太热了，连空调都____了。", answer:"罢工" },
+          { text:"教室后边有个男生____墙低头站着，好像是做错了什么事。", answer:"挨着" },
+          { text:"当初我____的专业并不是教育学，而是心理学。", answer:"报考" }
+        ]},
+      { options:["挨","白领","半决赛","抱歉","办事处"],
+        items:[
+          { text:"中国女子排球队顺利进入____。", answer:"半决赛" },
+          { text:"雷路公司十分看好中国市场，目前在上海、北京和广州都有____。", answer:"办事处" },
+          { text:"他虽然是大公司的____，但在短时间内也买不起属于自己的房子。", answer:"白领" },
+          { text:"你想挣这份钱，就得____这个累，这是你自己选的。", answer:"挨" },
+          { text:"如果我曾经让你感到难过，____！我绝对不是故意的。", answer:"抱歉" }
+        ]},
+      { options:["挨打","百分点","傍晚","暴风雨","报刊"],
+        items:[
+          { text:"总公司要求我们今年的销售利润要比去年提高至少 10 个____。", answer:"百分点" },
+          { text:"天突然黑得跟晚上似的，眼看一场____就要来了！", answer:"暴风雨" },
+          { text:"别看小马现在这么优秀，他小时候可调皮了，经常____。", answer:"挨打" },
+          { text:"阅览室里适合青少年阅读的____非常丰富。", answer:"报刊" },
+          { text:"____的时候，村口那棵大树底下，总有些老头儿老太太在那儿喝茶、聊天儿。", answer:"傍晚" }
+        ]},
+      { options:["安检","办公","保健","暴力","暴露"],
+        items:[
+          { text:"专家建议，购买____品一定要根据个人的身体情况，另外要注意合理消费。", answer:"保健" },
+          { text:"有问题大家应该好好商量，争吵（zhēngchǎo, tranh cãi）和____解决不了任何问题。", answer:"暴力" },
+          { text:"这次安全检查____出很多问题，必须认真对待，及时解决。", answer:"暴露" },
+          { text:"那瓶水刚才过____的时候拿出去了。", answer:"安检" },
+          { text:"王总，请问贵公司在什么地方____？方便给我一张名片吗？", answer:"办公" }
+        ]}
+    ],
+    ex3: [
+      { q:"他不过就是个刚毕业的大学生____，有什么不得了的?!",
+        opts:["罢了","算了","得了","行了"], a:0 },
+      { q:"经理脾气大，我们这些员工没有哪天不____骂的。",
+        opts:["挨","受","忍","见"], a:0 },
+      { q:"因为改进了方法，实验的成功率提高了 5 个____。",
+        opts:["百分之","百分点","百分百","一百分"], a:1 },
+      { q:"公司今年打算在西部地区成立几个新的____。",
+        opts:["办公室","办事处","代表团","会议室"], a:1 },
+      { q:"对不起，周五下午公司组织学习和开会，不对外____。",
+        opts:["办学","办公","办事","办理"], a:1 }
+    ]
+  },
+
+  2: {
+    vi: "Bài 2",
+    words: [
+      "暴雨","爆","爆发","爆炸","悲惨",
+      "背心","背着","被告","奔跑","本",
+      "本地","本期","本身","本土","本质",
+      "逼","笔试","必将","必修","闭"
+    ],
+    notes: [
+      { w:"暴雨", p:"bàoyǔ", pos:"名", vi:"mưa xối xả, mưa to", col:"",
+        ex:["今天晚上有暴雨，下班以后早点儿回家，把窗户关好。",
+            "暴雨刚过，天上出现了一道彩虹（cǎihóng, cầu vồng）！"] },
+      { w:"爆", p:"bào", pos:"动", vi:"nổ, nổ tung, vỡ tung", col:"",
+        ex:["别再吹气了，气球要爆了！",
+            "车在高速公路上爆胎（tāi, lốp xe）是特别危险的事。"] },
+      { w:"爆发", p:"bàofā", pos:"动", vi:"(núi lửa) phun trào, (chiến tranh) nổ ra / bùng nổ", col:"",
+        ex:["这是个活火山（huǒshān, núi lửa），新闻里说最近很可能会爆发。",
+            "战争在1914年爆发了。"] },
+      { w:"爆炸", p:"bàozhà", pos:"动", vi:"nổ, làm nổ tung, (tin) giật gân / nóng hổi", col:"",
+        ex:["目前为止，已有300人在爆炸中受伤。",
+            "爆炸风险被警察成功解除了，这里的居民安全了。"] },
+      { w:"悲惨", p:"bēicǎn", pos:"形", vi:"bi thảm, thê thảm, khốn khổ", col:"",
+        ex:["生活在战争年代的人们没有办法避免悲惨的命运。",
+            "她的成长经历非常悲惨，但她一直努力奋斗，最后过上了幸福的生活。"] },
+      { w:"背心", p:"bèixīn", pos:"名", vi:"áo ba lỗ, áo may ô", col:"",
+        ex:["他的篮球背心上写着“23”。",
+            "夏天很热，街上到处都是穿着短裤、背心的人。"] },
+      { w:"背着", p:"bèizhe", pos:"动", vi:"giấu giếm, (làm...) sau lưng", col:"",
+        ex:["她背着父母报名参加了歌手比赛。",
+            "难过的时候，妈妈只能背着我们偷偷流眼泪。"] },
+      { w:"被告", p:"bèigào", pos:"名", vi:"bị cáo", col:"",
+        ex:["他不是法官吗？怎么成被告了？",
+            "被告是一名年轻女性，只有十八九岁的样子。"] },
+      { w:"奔跑", p:"bēnpǎo", pos:"动", vi:"chạy băng băng, chạy nhanh", col:"",
+        ex:["一群马在草原上自由地奔跑着。",
+            "人生就像一场长距离的奔跑比赛，重要的是坚持，而不是速度。"] },
+      { w:"本", p:"běn", pos:"代/副", vi:"này, nay / vốn (dĩ nhiên)", col:"本市；本人；本不想",
+        ex:["本人姓方，是北京人。",
+            "本次活动是由北风公司赞助的。",
+            "我本不打算告诉别人，现在不说也不行了。",
+            "他本不想出门，可是妻子却拉他一起去逛街。"] },
+      { w:"本地", p:"běndì", pos:"名", vi:"vùng này, bản xứ", col:"",
+        ex:["你看起来不像本地人。",
+            "这是本地的一种特色美食，您尝尝。"] },
+      { w:"本期", p:"běn qī", pos:"名", vi:"kỳ này", col:"",
+        ex:["本期杂志介绍了著名演员马丽小姐。",
+            "感谢收听本期节目，听众朋友们，再见！"] },
+      { w:"本身", p:"běnshēn", pos:"代", vi:"bản thân, chính mình", col:"",
+        ex:["这个问题本身并不难解决，关键要看你想不想解决。",
+            "他本身就是个不爱运动的人，一看要花这么多钱，就更不想去什么健身房了。"] },
+      { w:"本土", p:"běntǔ", pos:"名", vi:"quê hương, nội địa, trong nước, bản địa, bản xứ", col:"",
+        ex:["近几年，本土企业发展得越来越好了。",
+            "很多牌子好像很有名，但是在本土以外的地方就没什么人知道了。"] },
+      { w:"本质", p:"běnzhì", pos:"名", vi:"bản chất", col:"",
+        ex:["事物的本质和我们看到的现象往往不一致。",
+            "这个人的本质并不坏，就是有点儿爱说大话。"] },
+      { w:"逼", p:"bī", pos:"动", vi:"thúc ép, dồn ép, ép buộc, bắt buộc", col:"",
+        ex:["学钢琴有时候必须逼一下儿，不然是学不出来的。",
+            "我父母从来不逼着我学这学那，他们更关注我对什么真正感兴趣。"] },
+      { w:"笔试", p:"bǐshì", pos:"名/动", vi:"thi viết", col:"",
+        ex:["这次考试的笔试部分很容易。",
+            "这次笔试的地点在一号教学楼。"] },
+      { w:"必将", p:"bìjiāng", pos:"副", vi:"sẽ, chắc chắn sẽ", col:"",
+        ex:["青年必将成为未来世界的主人。",
+            "今天不努力，明天你必将为今天的行为感到后悔！"] },
+      { w:"必修", p:"bìxiū", pos:"形", vi:"(môn học / việc) bắt buộc", col:"",
+        ex:["大学里的课程一般分为必修和选修两种。",
+            "变老是人生的必修课。"] },
+      { w:"闭", p:"bì", pos:"动", vi:"đóng / khép (cửa), nhắm (mắt), ngậm (miệng)", col:"",
+        ex:["所有人都对这件事情闭口不提。",
+            "小李闭上眼睛，试着不去想发生的一切。"] }
+    ],
+    ex1: [
+      { w:"爆炸", p:"bàozhà",  def:"nổ, làm nổ tung, (tin) giật gân / nóng hổi" },
+      { w:"悲惨", p:"bēicǎn",  def:"bi thảm, thê thảm, khốn khổ" },
+      { w:"被告", p:"bèigào",  def:"bị cáo" },
+      { w:"本质", p:"běnzhì",  def:"bản chất" },
+      { w:"笔试", p:"bǐshì",   def:"thi viết" },
+      { w:"必修", p:"bìxiū",   def:"(môn học / việc) bắt buộc" },
+      { w:"背心", p:"bèixīn",  def:"áo ba lỗ, áo may ô" },
+      { w:"逼",   p:"bī",      def:"thúc ép, dồn ép, ép buộc, bắt buộc" }
+    ],
+    ex2: [
+      { options:["暴雨","背心","本地","逼","悲惨"],
+        items:[
+          { text:"他身上这件毛____是女朋友给他织（zhī, dệt, đan）的，“温暖”牌的！", answer:"背心" },
+          { text:"没有人____我，这一切都是我自愿的。", answer:"逼" },
+          { text:"连日____使城市交通受到了严重影响。", answer:"暴雨" },
+          { text:"这个电视剧里人物的经历都太____了，我看不下去了。", answer:"悲惨" },
+          { text:"记者联系了____十几家宾馆，都说客满无房了。", answer:"本地" }
+        ]},
+      { options:["爆","背着","本期","笔试","本"],
+        items:[
+          { text:"____读书会我们将和大家分享小说家一繁的最新作品。", answer:"本期" },
+          { text:"他通过了公司的____，但是面试成绩不太理想。", answer:"笔试" },
+          { text:"他不知道____你说了你多少坏话呢！你还帮他？！", answer:"背着" },
+          { text:"我们老板说自己____是个普通农民，是大胆尝试给了他富起来的机会。", answer:"本" },
+          { text:"昨天我的手机充电的时候，电池给充____了。", answer:"爆" }
+        ]},
+      { options:["爆发","被告","本身","必将","本质"],
+        items:[
+          { text:"这门课____特别无聊，却因为有一个幽默的老师而变得有趣起来。", answer:"本身" },
+          { text:"听说____的律师是一名很有经验的大律师。", answer:"被告" },
+          { text:"“善良”和“傻”是有____区别的。", answer:"本质" },
+          { text:"小夫妻俩冷战（lěngzhàn, chiến tranh lạnh）了3天，今天终于____了，吵得楼下都听得清清楚楚。", answer:"爆发" },
+          { text:"这里发生的一切____成为过去，有的会被写进历史，有的会被人们彻底忘记。", answer:"必将" }
+        ]},
+      { options:["爆炸","奔跑","本土","必修","闭"],
+        items:[
+          { text:"你____嘴，不懂就不要乱讲话！", answer:"闭" },
+          { text:"我这儿有一条____性的新闻，你想不想听？", answer:"爆炸" },
+          { text:"我这学期有6门____课，会很忙。", answer:"必修" },
+          { text:"希望各位即将毕业的同学能在人生的道路上努力____。", answer:"奔跑" },
+          { text:"想要让更多的人学习说中文，就需要培养更多的____中文教师。", answer:"本土" }
+        ]}
+    ],
+    ex3: [
+      { q:"这部小说描写了 19 世纪末至 20 世纪初农民的____生活。",
+        opts:["悲伤","悲惨","难过","伤心"], a:1 },
+      { q:"他____老婆买了一辆车。",
+        opts:["背着","偷偷","悄悄","秘密"], a:0 },
+      { q:"新事物代替旧事物是历史发展的____。",
+        opts:["必然","目标","必将","肯定"], a:0 },
+      { q:"____你们俩认识啊，我还打算给你们互相介绍一下儿呢。",
+        opts:["本","本来","曾经","原来"], a:3 },
+      { q:"不论哪个国家，政府都会优先支持____企业的发展。",
+        opts:["本地","本土","当地","地方"], a:1 }
+    ]
+  },
+
+  3: {
+    vi: "Bài 3",
+    words: [
+      "边缘","编制","扁","变更","变换",
+      "变形","便","便是","遍地","表面上",
+      "病房","病情","拨打","波动","波浪",
+      "播","不便","不见","不料","不再"
+    ],
+    notes: [
+      { w:"边缘", p:"biānyuán", pos:"名", vi:"vùng ven, mép, rìa, lề", col:"城市的边缘",
+        ex:["那张照片的边缘都破了，照片上的人也很模糊。",
+            "汽车行驶在山路（shānlù, dòng núi）的边缘，感觉像是在飞一样。"] },
+      { w:"编制", p:"biānzhì", pos:"动", vi:"đan, tết, bện; viết/biên dịch (chương trình máy vi tính), lập trình; biên soạn (từ điển); vạch/lên (kế hoạch)", col:"编制竹器；编制程序",
+        ex:["有的人爱好手工编制的日用品。",
+            "他的工作就是根据客户的需要编制各种电脑程序。"] },
+      { w:"扁", p:"biǎn", pos:"形", vi:"dẹt, bẹp", col:"",
+        ex:["这种动物的嘴又宽又扁，看起来像鸭子的嘴。",
+            "你帮我看看超市里有没有那种扁的面条儿，有的话买一斤。"] },
+      { w:"变更", p:"biàngēng", pos:"动", vi:"thay đổi, sửa đổi", col:"变更计划",
+        ex:["变更合同指的是对合同内容进行修改。",
+            "一旦确认后，就不能随意变更注册信息了。"] },
+      { w:"变换", p:"biànhuàn", pos:"动", vi:"thay đổi, biến đổi, hoán đổi", col:"变换位置；变换身份",
+        ex:["这个节目的内容不错，要是能变换一下儿形式，效果可能会更好。",
+            "离婚后李丽想变换一下儿风格，她剪掉了长头发，换上了一身运动装。"] },
+      { w:"变形", p:"biànxíng", pos:"动", vi:"biến dạng", col:"",
+        ex:["这张照片照得不好，把人都照变形了。",
+            "车门被撞得变了形，但还好人没事儿。"] },
+      { w:"便", p:"biàn", pos:"副/连", vi:"thì, liền, bèn; dù, dù cho", col:"",
+        ex:["他见妻子不说话，便不再继续问了。",
+            "如果没有大家的帮助，我们的任务便无法完成。",
+            "你便送来，我也不要了。",
+            "便是你们都不同意，我也要去做。"] },
+      { w:"便是", p:"biàn shì", pos:"动", vi:"là, chính là, dù cho", col:"",
+        ex:["这位便是我跟你们说的新同学。",
+            "便是有再大的困难，我们也不能放弃。"] },
+      { w:"遍地", p:"biàndì", pos:"副", vi:"khắp nơi, đâu đâu", col:"",
+        ex:["草原上遍地是牛羊。",
+            "冬去春来，遍地都是不知道名字的小花。"] },
+      { w:"表面上", p:"biǎomiàn shang", pos:"名", vi:"ngoài mặt, bề ngoài", col:"",
+        ex:["他表面上很严肃，其实是个很幽默的人。",
+            "李明表面上接受了父母的意见，心里却不是这样想的。"] },
+      { w:"病房", p:"bìngfáng", pos:"名", vi:"phòng bệnh nhân", col:"",
+        ex:["这是个8人住的大病房，比较吵。",
+            "护士，请问316病房的病人去哪里了？"] },
+      { w:"病情", p:"bìngqíng", pos:"名", vi:"bệnh tình, tình trạng bệnh", col:"",
+        ex:["医生说母亲的病情比较特殊，还要观察一下儿。",
+            "奶奶的病情已经稳定下来了，过几天应该就可以出院了。"] },
+      { w:"拨打", p:"bōdǎ", pos:"动", vi:"gọi/quay số (điện thoại)", col:"",
+        ex:["在中国，发生火灾要拨打119。",
+            "对不起，您拨打的用户已关机。"] },
+      { w:"波动", p:"bōdòng", pos:"动/名", vi:"chập chờn, không ổn định, dao động, biến động", col:"价格波动；上下波动",
+        ex:["这一消息引起学生思想上很大的波动。",
+            "今年有很多地方受灾，可是粮食价格却没有太大波动。"] },
+      { w:"波浪", p:"bōlàng", pos:"名", vi:"gợn sóng, sóng", col:"",
+        ex:["我们的船推开波浪，向大海深处驶去。",
+            "她站在海边，波浪一次又一次地打在她的小腿上。"] },
+      { w:"播", p:"bō", pos:"动", vi:"phát sóng/phát thanh (tin tức), gieo (hạt)", col:"",
+        ex:["她在中央电视台播了10年的新闻。",
+            "春天是农民播种的季节。"] },
+      { w:"不便", p:"búbiàn", pos:"形/动", vi:"bất tiện, không thuận tiện, phiền phức; không tiện (làm việc gì)", col:"",
+        ex:["奶奶腿脚不便，上下楼需要人扶着。",
+            "过去这里交通不便，有的孩子上学要走十几公里的山路。",
+            "他不愿意说，我也不便再问。"] },
+      { w:"不见", p:"bújiàn", pos:"动", vi:"không gặp (mặt), mất/không thấy/không tìm thấy (đồ vật)", col:"",
+        ex:["好久不见，你去哪儿了？",
+            "我的钱包不见了！"] },
+      { w:"不料", p:"búliào", pos:"连", vi:"thình lình, không ngờ, bất ngờ", col:"",
+        ex:["我正要和他讲道理，不料他竟然要打我！",
+            "本来计划今天开运动会，不料下起雨来了。"] },
+      { w:"不再", p:"búzài", pos:"副", vi:"không (còn)... nữa", col:"",
+        ex:["经过老师的批评教育，他不再迟到了。",
+            "那件事情发生之后，我们就不再是朋友了。"] }
+    ],
+    ex1: [
+      { w:"边缘",     p:"biānyuán",     def:"vùng ven, mép, rìa, lề" },
+      { w:"扁",       p:"biǎn",         def:"dẹt, bẹp" },
+      { w:"变形",     p:"biànxíng",     def:"biến dạng" },
+      { w:"表面上",   p:"biǎomiànshang",def:"ngoài mặt, bề ngoài" },
+      { w:"病情",     p:"bìngqíng",     def:"bệnh tình, tình trạng bệnh" },
+      { w:"波浪",     p:"bōlàng",       def:"gợn sóng, sóng" },
+      { w:"播",       p:"bō",           def:"phát sóng/phát thanh (tin tức), gieo (hạt)" },
+      { w:"不便",     p:"búbiàn",       def:"bất tiện, không thuận tiện, phiền phức; không tiện (làm việc gì)" }
+    ],
+    ex2: [
+      { options:["边缘","变形","病房","播","变换"],
+        items:[
+          { text:"不知道老李在哪个____，你打老李儿子的电话问一下儿吧。", answer:"病房" },
+          { text:"办公室的门锁有点儿____，我花了好长时间才打开。", answer:"变形" },
+          { text:"昨天电视上____了一条关于规范保健品市场的新闻。", answer:"播" },
+          { text:"学校里的餐厅也不知道____下儿菜单，每天都是这几个菜！", answer:"变换" },
+          { text:"森林的____有一条公路，风景很好。", answer:"边缘" }
+        ]},
+      { options:["编制","便","病情","不便","表面上"],
+        items:[
+          { text:"在他家他老婆说了算，老婆让他往东他____不敢往西。", answer:"便" },
+          { text:"这次出国学习她没赶上，她____说不在乎，其实心里很难过。", answer:"表面上" },
+          { text:"这是人家夫妻之间的事，我也____多说什么。", answer:"不便" },
+          { text:"这本词典是由多位著名学者共同____而成的。", answer:"编制" },
+          { text:"陈医生，这是 35 床病人张建国的家属，他想了解一下儿张建国的____。", answer:"病情" }
+        ]},
+      { options:["扁","便是","拨打","不见","不再"],
+        items:[
+          { text:"既然你已经决定了，我也____劝你了，祝你一切顺利！", answer:"不再" },
+          { text:"他来干什么？你就跟他说我没空儿，____！", answer:"不见" },
+          { text:"过了这座桥____上海了。", answer:"便是" },
+          { text:"这种____鼓主要流行于中国北方地区，有很长的历史了。", answer:"扁" },
+          { text:"您如果对我们的产品不满意，可以____我们的客户服务电话。", answer:"拨打" }
+        ]},
+      { options:["变更","遍地","波动","不料","波浪"],
+        items:[
+          { text:"他去上海以前，觉得那个地方____都是机会，只要肯努力就能成功。", answer:"遍地" },
+          { text:"____不断向小船打来，弄得船就要翻了。", answer:"波浪" },
+          { text:"受国际石油价格____的影响，国内汽油价格快速上涨。", answer:"波动" },
+          { text:"孙立觉得有点儿饿，想出门吃点儿东西，____街上的饭馆都已经关门了。", answer:"不料" },
+          { text:"由于暴风雨，飞机起飞的时间再次____了。", answer:"变更" }
+        ]}
+    ],
+    ex3: [
+      { q:"这张钱因为____缺了一块儿，所以花不出去，您可以去银行换一张新的。",
+        opts:["旁","边缘","附近","周围"], a:1 },
+      { q:"这个故事我以前读过，这次不过是____了一下儿时间、地点，还有人物的名字。",
+        opts:["变更","变为","变形","变成"], a:0 },
+      { q:"经过两年的治理，这个老城区彻底改变了以前垃圾____、污水横流的旧面貌。",
+        opts:["到处","遍地","随地","四处"], a:1 },
+      { q:"真____他就是你的男朋友!",
+        opts:["不料","竟然","没想到","吃惊"], a:2 },
+      { q:"他____装得很努力、很认真地在学习，其实在偷偷地玩儿游戏！",
+        opts:["表面上","看样子","显得","似乎"], a:0 }
+    ]
+  },
+
+  4: {
+    vi: "Bài 4",
+    words: [
+      "不至于","补考","补课","补习","补助",
+      "捕","不成","不禁","不仅仅","不通",
+      "不怎么","不怎么样","不值","布满","部队",
+      "采纳","踩","参赛","参展","餐"
+    ],
+    notes: [
+      { w:"不至于", p:"búzhìyú", pos:"动", vi:"không/chưa đến mức, không/chưa đến nỗi", col:"",
+        ex:["我想他不至于连这一点儿道理都不懂。",
+            "老板虽然不喜欢他，但也不至于故意为难他。"] },
+      { w:"补考", p:"bǔkǎo", pos:"动", vi:"thi lại, thi bổ sung", col:"",
+        ex:["这次考试不及格的同学可以申请补考。",
+            "补考时间一般安排在每学期开学的第二周。"] },
+      { w:"补课", p:"bǔ kè", pos:"动", vi:"học bù/dạy bù (bài học bị thiếu), học thêm", col:"",
+        ex:["王老师放弃休息时间给学生补课。",
+            "我读中学的时候，从来没在学校外面补过课。",
+            "上周马丽生病没来上课，所以想请王老师周末给她补补课。"] },
+      { w:"补习", p:"bǔxí", pos:"动", vi:"học bố túc/học bù/học thêm/dạy thêm (sau giờ làm/học)", col:"",
+        ex:["我不上补习班，学校教的已经够学了。",
+            "我前面有几节课没上，这周末我得好好补习补习。"] },
+      { w:"补助", p:"bǔzhù", pos:"动/名", vi:"trợ cấp; tiền trợ cấp", col:"",
+        ex:["李师傅家里经济困难，厂里每月补助他600块钱。",
+            "周云这个月出了三次差，公司按标准补助了她1000多块。",
+            "政府每个月都给生活困难的老人发补助。",
+            "小李，这个月的补助怎么还没发啊？都过了两天了。"] },
+      { w:"捕", p:"bǔ", pos:"动", vi:"bắt, tóm, đánh (cá)", col:"",
+        ex:["这条河禁止捕鱼。",
+            "小时候我们经常在山上捕虫子玩儿。"] },
+      { w:"不成", p:"bùchéng", pos:"动/形/助", vi:"không được; không giỏi, không thành thạo, kém cỏi; sao, hay sao, ư (dùng ở cuối câu, thể hiện ngữ khí phản vấn hoặc suy đoán)", col:"",
+        ex:["明晚恐怕不成，我约了同事吃饭。",
+            "要想有一个健康的身体，不锻炼可不成。",
+            "我在技术方面不成，我帮你问问别人。",
+            "跳舞这方面我是不成的，你还是和小李一起去吧。",
+            "难道就这样算了不成？"] },
+      { w:"不禁", p:"bùjīn", pos:"副", vi:"không kìm nổi, không nhịn được", col:"",
+        ex:["我不禁想起我们第一次见面时的情形。",
+            "读到精彩的地方，她不禁拍手叫好（jiào hǎo, khen hay）。"] },
+      { w:"不仅仅", p:"bù jǐnjǐn", pos:"连", vi:"không chỉ", col:"",
+        ex:["美不仅仅是眼睛看到的，更应是你的内心感受到的。",
+            "我希望我们不仅仅是同事关系，也能成为无话不谈的好朋友。"] },
+      { w:"不通", p:"bùtōng", pos:"动", vi:"bị nghẹt/nghẽn, (điện thoại) bận/không gọi được, (nghĩ) không thông, không logic, không hợp lý", col:"",
+        ex:["他的电话不通，我找不到他。",
+            "他想来想去，怎么也想不通这件事情。",
+            "你的作文这里写得不通，再改改吧。"] },
+      { w:"不怎么", p:"bùzěnme", pos:"副", vi:"không... lắm", col:"",
+        ex:["他这个人做事不怎么替别人考虑。",
+            "这次考试不怎么难，我应该可以拿到90分以上。"] },
+      { w:"不怎么样", p:"bùzěnmeyàng", pos:"", vi:"chẳng ra gì, chẳng ra sao, bình thường, tầm thường, chẳng có gì đặc sắc", col:"",
+        ex:["这个牌子的服装不怎么样，换一家看看吧。",
+            "我跟他的关系一直不怎么样，你还是找别人吧。"] },
+      { w:"不值", p:"bùzhí", pos:"动", vi:"không đáng", col:"",
+        ex:["房子确实不错，但是不值这个价钱。",
+            "为这样的老板工作了12年，我都替你感到不值。"] },
+      { w:"布满", p:"bùmǎn", pos:"动", vi:"dày, rải/phủ đầy", col:"",
+        ex:["天空布满了乌云（wūyún, mây đen），快要下雨了。",
+            "老奶奶的脸上布满了皱纹（zhòuwén, nếp nhăn），头发也都白了。"] },
+      { w:"部队", p:"bùduì", pos:"名", vi:"bộ đội, quân đội", col:"",
+        ex:["接到命令后，部队立即出发了。",
+            "那次战斗中，他因为受伤和大部队失去了联系。"] },
+      { w:"采纳", p:"cǎinà", pos:"动", vi:"tiếp thu, tiếp nhận (ý kiến, yêu cầu)", col:"",
+        ex:["政府采纳了专家的合理化建议。",
+            "这是大家的意见，希望你能采纳。"] },
+      { w:"踩", p:"cǎi", pos:"动", vi:"giẫm, đạp", col:"",
+        ex:["对不起，我是不是踩你脚了？",
+            "他气得把信扔在了地上，还踩了两脚。"] },
+      { w:"参赛", p:"cānsài", pos:"动", vi:"dự thi, tham gia thi đấu", col:"参赛资格；参赛选手",
+        ex:["报名参赛是需要勇气的。",
+            "本次大赛共收到1236件参赛作品。"] },
+      { w:"参展", p:"cānzhǎn", pos:"动", vi:"tham gia triển lãm", col:"",
+        ex:["这次参展的作品艺术水平都很高。",
+            "上周的北京科技展我们公司的产品也参展了。"] },
+      { w:"餐", p:"cān", pos:"量", vi:"bữa", col:"",
+        ex:["都夜里11点多了，你这吃的是第几餐啊？",
+            "结婚以后，她每天想得最多的是怎么解决一家人的一日三餐。"] }
+    ],
+    ex1: [
+      { w:"不至于", p:"búzhìyú", def:"không/chưa đến mức, không/chưa đến nỗi" },
+      { w:"补助",   p:"bǔzhù",   def:"trợ cấp; tiền trợ cấp" },
+      { w:"捕",     p:"bǔ",      def:"bắt, tóm, đánh (cá)" },
+      { w:"不禁",   p:"bùjīn",   def:"không kìm nổi, không nhịn được" },
+      { w:"部队",   p:"bùduì",   def:"bộ đội, quân đội" },
+      { w:"布满",   p:"bùmǎn",   def:"dày, rải/phủ đầy" },
+      { w:"采纳",   p:"cǎinà",   def:"tiếp thu, tiếp nhận (ý kiến, yêu cầu)" },
+      { w:"踩",     p:"cǎi",     def:"giẫm, đạp" }
+    ],
+    ex2: [
+      { options:["捕","不怎么","采纳","补助","不怎么样"],
+        items:[
+          { text:"夏天的时候，公司会给工人发高温____。", answer:"补助" },
+          { text:"现在近海很难____到鱼了。", answer:"捕" },
+          { text:"他们店的生意____，一天都没看见几个客人进去。", answer:"不怎么样" },
+          { text:"看他的样子，好像____愿意啊。", answer:"不怎么" },
+          { text:"听说他的意见不但没有被领导____，还被领导点名批评了。", answer:"采纳" }
+        ]},
+      { options:["补考","不成","踩","不通","不至于"],
+        items:[
+          { text:"我的眼镜掉地上了，别____了！", answer:"踩" },
+          { text:"你这么办事可____，会被同事骂的。", answer:"不成" },
+          { text:"为这么点儿小事就闹离婚，____吧？", answer:"不至于" },
+          { text:"我按地图走的，结果都快到了，路口那儿立了个牌子：“此路____！”", answer:"不通" },
+          { text:"他1000米跑没及格，老师说下次课给他一次____的机会。", answer:"补考" }
+        ]},
+      { options:["补课","不禁","不值","部队","参赛"],
+        items:[
+          { text:"听了他的故事，人们____流下了眼泪。", answer:"不禁" },
+          { text:"老奶奶说，她刚结婚时丈夫就跟着____走了，后来再也没有回来。", answer:"部队" },
+          { text:"这个月要举行新生足球赛，二班的同学问我们要不要一起报名____。", answer:"参赛" },
+          { text:"为了青少年的健康成长，国家规定不得在假期给中小学生____。", answer:"补课" },
+          { text:"这些旧家具加起来也____500块。", answer:"不值" }
+        ]},
+      { options:["补习","布满","参展","餐","不仅仅"],
+        items:[
+          { text:"你帮我这么大的忙，只吃我一____饭可不行！", answer:"餐" },
+          { text:"小李，我儿子6月就高考了，我想请你给他____下儿数学，行吗？", answer:"补习" },
+          { text:"这次食品博览会的____单位达到了500多家。", answer:"参展" },
+          { text:"虽然人活着需要吃饭，但人活着可____是为了吃饭。", answer:"不仅仅" },
+          { text:"7岁时他从山上摔了下来，村里人找到他的时候，他全身____了大大小小的伤口（shāngkǒu, vết thương）。", answer:"布满" }
+        ]}
+    ],
+    ex3: [
+      { q:"以前我觉得家里的饭菜____好吃，现在才发现，哪里的饭菜都不如妈妈做的香。",
+        opts:["不怎么","不怎么样","怎么","一般"], a:0 },
+      { q:"最近我跟一位老师在____英文，为明年的雅思（yǎsī, kỳ thi IELTS）考试做准备。",
+        opts:["补习","补考","补课","补助"], a:0 },
+      { q:"我们只要40岁以下的，他看上去可____40岁啊。",
+        opts:["不仅","不但","不论","不止"], a:3 },
+      { q:"你应该主动跟客户道歉（dào qiàn, xin lỗi），难道还要让客户跟你说对不起____？",
+        opts:["不行","不好","不成","不值"], a:2 },
+      { q:"此刻，他对未来____了信心！",
+        opts:["充满","填满","装满","布满"], a:0 }
+    ]
+  },
+
+  5: {
+    vi: "Bài 5",
+    words: [
+      "残疾","残疾人","残酷","惨","仓库",
+      "藏","操纵","厕所","侧","测定",
+      "策划","策略","层面","差异","查出",
+      "查看","拆迁","产量","昌盛","长短"
+    ],
+    notes: [
+      { w:"残疾", p:"cánjí", pos:"名", vi:"dị tật, khuyết tật", col:"",
+        ex:["她是一位听力有残疾的画家。",
+            "虽然身体残疾，但他始终没有放弃自己的理想。"] },
+      { w:"残疾人", p:"cánjírén", pos:"名", vi:"người tàn tật, người khuyết tật", col:"",
+        ex:["残疾人是社会的一员，有受教育的权利。",
+            "中国从1984年开始正式举办残疾人运动会。"] },
+      { w:"残酷", p:"cánkù", pos:"形", vi:"tàn khốc, tàn nhẫn, thảm khốc", col:"",
+        ex:["孩子的死对他们来说是一个残酷的打击。",
+            "没想到现实这么残酷，他刚毕业就失业了。"] },
+      { w:"惨", p:"cǎn", pos:"形", vi:"thảm, bi thảm, thê thảm, nặng/dữ dội (chỉ mức độ nghiêm trọng)", col:"",
+        ex:["他今天从自行车上摔下来了，摔得很惨。",
+            "上午被老板骂，晚上又被女朋友骂了，你怎么这么惨?!"] },
+      { w:"仓库", p:"cāngkù", pos:"名", vi:"kho, nhà kho", col:"",
+        ex:["其他仓库都是满的，只剩这一个空的了。",
+            "由于管理上的漏洞，仓库发生了火灾却没有得到及时控制，给公司带来了巨大的损失。"] },
+      { w:"藏", p:"cáng", pos:"动", vi:"ẩn nấp, trốn, cất giấu, cất giữ", col:"",
+        ex:["小明藏在了床底下，小朋友们都没有找到他。",
+            "他的私人藏书达到了两万多册。"] },
+      { w:"操纵", p:"cāozòng", pos:"动", vi:"điều khiển (máy móc), thao túng, lũng đoạn, chi phối", col:"操纵机器",
+        ex:["随着现代技术的发展，远距离操纵无人机已经不是什么新鲜事了。",
+            "他父亲才是公司里实际上操纵一切的人。"] },
+      { w:"厕所", p:"cèsuǒ", pos:"名", vi:"nhà vệ sinh", col:"",
+        ex:["呀，你怎么跑到男厕所里去了！",
+            "小张说他肚子疼，上厕所去了。"] },
+      { w:"侧", p:"cè", pos:"名/动", vi:"bên, mặt bên; nghiêng (người/đầu), vểnh/dỏng (tai)", col:"",
+        ex:["我跟着导演来到了舞台侧边的演员休息区。",
+            "你面对学校的大门，大门左侧就是中国银行。",
+            "小丽，你的头稍微往左侧一点儿。",
+            "小偷儿侧身从超市后门快步跑了出去。"] },
+      { w:"测定", p:"cèdìng", pos:"动", vi:"xác định, đo, đo lường", col:"测定温度",
+        ex:["你们知道怎么测定太阳的高度角吗？",
+            "现在用手机就可以测定自己移动的速度和方向。"] },
+      { w:"策划", p:"cèhuà", pos:"动", vi:"vạch kế hoạch", col:"策划方案",
+        ex:["儿童公园正在策划新的主题活动。",
+            "别看他这么年轻，他可是这次活动的主要策划人之一。"] },
+      { w:"策略", p:"cèlüè", pos:"名", vi:"sách lược, chiến lược", col:"外交策略；行动策略",
+        ex:["你们在谈判的策略上存在严重的问题。",
+            "吵架也要讲究策略，你不能同时跟你爸你妈吵，至少得拉其中一个人过来帮你。"] },
+      { w:"层面", p:"céngmiàn", pos:"名", vi:"trình độ, mức độ, phương diện", col:"",
+        ex:["我们不可能只想着技术层面的问题，还得考虑成本和收益。",
+            "如果单纯从文学层面来评价这部作品，它无疑是非常成功的。"] },
+      { w:"差异", p:"chāyì", pos:"名", vi:"sự khác biệt", col:"差异明显；有差异",
+        ex:["这两家产品包装和功能上的差异非常小。",
+            "由于文化背景不同，人们在思想上存在差异是很正常的事。"] },
+      { w:"查出", p:"cháchū", pos:"动", vi:"tra ra, tìm ra, phát hiện, dò ra", col:"",
+        ex:["不查出问题在哪里，就没办法修好。",
+            "上个月他被查出有经济问题，现在正在接受全面调查。"] },
+      { w:"查看", p:"chákàn", pos:"动", vi:"kiểm tra, xem xét", col:"",
+        ex:["他养成了每天早上查看工作邮箱的习惯。",
+            "听到有奇怪的声音，服务员就进房间去查看了一下儿。"] },
+      { w:"拆迁", p:"chāiqiān", pos:"动", vi:"tháo dỡ (nhà) và chuyển đến nơi khác", col:"拆迁范围",
+        ex:["他们家老房子的拆迁费差不多够买两套新房了。",
+            "学校快要拆迁到新的地方了，我们几个老同学约着一起回去看了看。"] },
+      { w:"产量", p:"chǎnliàng", pos:"名", vi:"sản lượng", col:"",
+        ex:["我们厂7月份的产量比6月份提高了1个百分点。",
+            "2022年中国粮食总产量13731亿斤，创造了历史新高。"] },
+      { w:"昌盛", p:"chāngshèng", pos:"形", vi:"hưng thịnh, thịnh vượng", col:"事业昌盛",
+        ex:["那是中国历史上文化最昌盛的时代之一。",
+            "新的一年即将到来，让我们共同祝福我们的国家永远繁荣昌盛。"] },
+      { w:"长短", p:"chángduǎn", pos:"名", vi:"chiều dài, độ dài; điều/chuyện tốt xấu/đúng sai; bất trắc, tai nạn, rủi ro", col:"",
+        ex:["这条裤子长短合适，就是颜色浅了一点儿。",
+            "老李这个人从来不在背后议论人家的长短。",
+            "你千万注意安全，要是你有什么长短，我没办法跟你父母交代。"] }
+    ],
+    ex1: [
+      { w:"残疾",   p:"cánjí",       def:"dị tật, khuyết tật" },
+      { w:"仓库",   p:"cāngkù",      def:"kho, nhà kho" },
+      { w:"藏",     p:"cáng",        def:"ẩn nấp, trốn, cất giấu, cất giữ" },
+      { w:"操纵",   p:"cāozòng",     def:"điều khiển (máy móc), thao túng, lũng đoạn, chi phối" },
+      { w:"策划",   p:"cèhuà",       def:"vạch kế hoạch" },
+      { w:"层面",   p:"céngmiàn",    def:"trình độ, mức độ, phương diện" },
+      { w:"差异",   p:"chāyì",       def:"sự khác biệt" },
+      { w:"昌盛",   p:"chāngshèng",  def:"hưng thịnh, thịnh vượng" }
+    ],
+    ex2: [
+      { options:["残疾","藏","策划","查看","仓库"],
+        items:[
+          { text:"今年公司租用____的费用比去年翻了一倍。", answer:"仓库" },
+          { text:"这个方案我们组____了半年，今天终于获得了专家的肯定。", answer:"策划" },
+          { text:"妈妈，你猜我把自行车____哪儿了。", answer:"藏" },
+          { text:"他虽然身体____，却能始终保持积极向上的心态。", answer:"残疾" },
+          { text:"警察反复____现场视频，终于发现了重大线索。", answer:"查看" }
+        ]},
+      { options:["残疾人","操纵","策略","拆迁","测定"],
+        items:[
+          { text:"聪明的父母教育孩子时特别注意方法和____。", answer:"策略" },
+          { text:"他在这个电影中的角色不但拥有财富和地位，而且还拥有能随意____人心的可怕力量。", answer:"操纵" },
+          { text:"“残联”的全称是“中国____联合会”，于1988年3月11日在北京正式成立。", answer:"残疾人" },
+          { text:"小陈他们家搬到江北去了，说是原来住的房子要____。", answer:"拆迁" },
+          { text:"没有专门的设备，光凭眼睛看是无法准确____车辆行驶的具体速度的。", answer:"测定" }
+        ]},
+      { options:["残酷","厕所","层面","产量","查出"],
+        items:[
+          { text:"东西要是卖不出去，____越高越亏钱。", answer:"产量" },
+          { text:"医生怎么说？____是什么病了吗？", answer:"查出" },
+          { text:"这个问题涉及（shèjí, liên quan đến）的____太广、太复杂，短期内无法解决。", answer:"层面" },
+          { text:"出发前去下儿____吧，路上两个多小时呢。", answer:"厕所" },
+          { text:"这么小的孩子就失去了父母，战争真是太____了！", answer:"残酷" }
+        ]},
+      { options:["惨","侧","差异","昌盛","长短"],
+        items:[
+          { text:"每个人都希望自己的事业____、家庭生活幸福。", answer:"昌盛" },
+          { text:"____了，我昨天忘记做数学作业了，怎么办啊？", answer:"惨" },
+          { text:"在外面要注意安全，你要是有什么____，你老婆孩子怎么办？", answer:"长短" },
+          { text:"照片上这个人真是你吗？怎么跟真人____这么大？！", answer:"差异" },
+          { text:"她一听我说因为玩儿游戏忘了约会的时间，就____过脸去不理我了。", answer:"侧" }
+        ]}
+    ],
+    ex3: [
+      { q:"人生如果没有____，就会像脚踩西瓜皮，滑到哪里算哪里。",
+        opts:["设计","策划","估计","规划"], a:1 },
+      { q:"建议你使用前先认真阅读一下儿____说明。",
+        opts:["操作","掌握","操纵","控制"], a:0 },
+      { q:"她跟我们____，她17岁就大学毕业了，30岁就成了教授。",
+        opts:["差异","不同","区别","差别"], a:1 },
+      { q:"市场竞争要遵守规则，不能采取不正当（zhèngdàng, chính đáng, thỏa đáng）____。",
+        opts:["策略","手段","技巧","办法"], a:1 },
+      { q:"上飞机前，乘客和行李都必须通过安全____。",
+        opts:["测试","考试","测定","检查"], a:3 }
+    ]
+  },
+
+  6: {
+    vi: "Bài 6",
+    words: [
+      "长假","长久","长跑","长远","常规",
+      "常年","厂商","场地","场馆","场景",
+      "畅通","超","超出","炒","炒股",
+      "炒作","车号","车牌","车展","撤离"
+    ],
+    notes: [
+      { w:"长假", p:"chángjià", pos:"名", vi:"kỳ nghỉ dài", col:"",
+        ex:["忙完这段时间，真应该放个长假好好休息休息。",
+            "国庆和春节长假期间，有些汽车上高速公路是免费的。"] },
+      { w:"长久", p:"chángjiǔ", pos:"形", vi:"lâu dài", col:"长久的努力；无法长久；长久以来",
+        ex:["经过长久的观察，我觉得小张是这批新来的大学生里最优秀的一个。",
+            "听说我要跟比自己小10岁的男人谈恋爱，朋友们都觉得我的这段感情是不可能长久的。"] },
+      { w:"长跑", p:"chángpǎo", pos:"名", vi:"môn chạy đường dài", col:"长跑冠军",
+        ex:["一场婚礼结束了他们俩8年的爱情长跑。",
+            "这个城市已经举办过五届马拉松（mǎlāsōng, cuộc chạy đua marathon）长跑比赛了。"] },
+      { w:"长远", p:"chángyuǎn", pos:"形", vi:"lâu dài", col:"长远目标",
+        ex:["真正爱孩子的父母一定会为孩子考虑得更长远。",
+            "不论是学习还是工作，都应该有一个长远的规划。"] },
+      { w:"常规", p:"chángguī", pos:"名/形", vi:"lệ thường, thông lệ; thông thường", col:"",
+        ex:["按照常规，这个周末该你打扫屋子了。",
+            "世界在不断发展变化，有时人们需要打破常规，根据新情况制定新办法。",
+            "遇到这种问题，常规的处理方法是尽快联系学生家长。",
+            "常规体检就是为了让自己掌握自身健康状况而进行的定期健康检查。"] },
+      { w:"常年", p:"chángnián", pos:"副/名", vi:"quanh năm, suốt năm, cả năm; hằng năm", col:"",
+        ex:["他常年都要靠吃药控制病情。",
+            "他常年在外边跑生意，很少关心家里的事。",
+            "希望今年的收入能比常年增加一些。",
+            "今年春季雨水少，还不到常年的一半。"] },
+      { w:"厂商", p:"chǎngshāng", pos:"名", vi:"chủ xưởng, chủ doanh nghiệp", col:"国内外厂商",
+        ex:["广大消费者希望生产厂商对产品质量问题做出解释。",
+            "这里良好的商业环境吸引了众多外国厂商来投资建厂。"] },
+      { w:"场地", p:"chǎngdì", pos:"名", vi:"sân bãi", col:"运动场地；演出场地",
+        ex:["这项运动不受场地限制，在任何地方都可以进行。",
+            "由于天气原因，我们的活动场地转移到了体育馆内。"] },
+      { w:"场馆", p:"chǎngguǎn", pos:"名", vi:"nơi/khu nhà tổ chức, nhà thi đấu và sân vận động", col:"运动场馆；比赛场馆；演出场馆",
+        ex:["这是我们学校新修建的体育场馆。",
+            "媒体今早公布了那个明星这次演唱会的时间和场馆安排。"] },
+      { w:"场景", p:"chǎngjǐng", pos:"名", vi:"pha/cảnh (trong kịch, phim), quang cảnh, cảnh tượng", col:"舞台场景；当时的场景",
+        ex:["这部电影里有很多有意思的场景。",
+            "他怎么也忘不了事故发生时的场景。"] },
+      { w:"畅通", p:"chàngtōng", pos:"形", vi:"thông suốt, (mạng Internet) không bị nghẽn", col:"道路畅通；畅通无阻",
+        ex:["明天的视频面试需要确保网络畅通。",
+            "经过一年的治理，市内交通比以前畅通多了。"] },
+      { w:"超", p:"chāo", pos:"动/副", vi:"vượt, vượt quá, hơn; siêu, rất", col:"超车；超速",
+        ex:["东风汽车公司昨天宣布已经超计划完成了今年的销售任务。",
+            "800元一晚？！我出差住酒店的标准是280元，你们店的价格超了太多了。",
+            "你尝尝，这个苹果超甜！",
+            "你相信我，我看人超准，他会是个非常好的合作伙伴。"] },
+      { w:"超出", p:"chāochū", pos:"动", vi:"vượt qua, vượt quá", col:"",
+        ex:["他的比赛成绩好得超出了所有人的想象。",
+            "对不起，这件事已经超出了我的能力范围。"] },
+      { w:"炒", p:"chǎo", pos:"动", vi:"xào, rang, tráng (trứng)", col:"炒鸡蛋",
+        ex:["服务员，这饭没炒好，请重新炒一份。",
+            "晚上炒两个菜，我们一起喝一杯，怎么样？"] },
+      { w:"炒股", p:"chǎo gǔ", pos:"动", vi:"đầu cơ/chơi cổ phiếu", col:"",
+        ex:["他为了专心炒股，把工作都辞了。",
+            "这几年他炒过股、打过工，但都没挣到什么钱。"] },
+      { w:"炒作", p:"chǎozuò", pos:"动", vi:"quảng cáo rầm rộ, thổi phồng", col:"商业炒作",
+        ex:["很多娱乐新闻都是炒作，不能太相信。",
+            "这种产品经过媒体的一再炒作，价格已经翻了三倍。"] },
+      { w:"车号", p:"chēhào", pos:"名", vi:"số xe", col:"",
+        ex:["这车号看起来挺熟，好像是小李的。",
+            "现在的停车场一般都能自动记录车号和车辆进出的时间。"] },
+      { w:"车牌", p:"chēpái", pos:"名", vi:"biển số xe", col:"",
+        ex:["这辆车是北京的车牌。",
+            "刚买的新车上路行驶时可以使用临时车牌。"] },
+      { w:"车展", p:"chēzhǎn", pos:"名", vi:"cuộc triển lãm xe", col:"",
+        ex:["随着汽车的普及，全国各大城市经常举办大型车展。",
+            "这次车展的主题是新能源（néngyuán, năng lượng）汽车。"] },
+      { w:"撤离", p:"chèlí", pos:"动", vi:"sơ tán, di tản, rút lui khỏi, rời khỏi", col:"",
+        ex:["在消防员的指挥下，所有人员都及时从火灾现场安全撤离了。",
+            "洪水（hóngshuǐ, lũ, hồng thủy）就要来了，我们正在组织群众撤离。"] }
+    ],
+    ex1: [
+      { w:"长假",   p:"chángjià",   def:"kỳ nghỉ dài" },
+      { w:"常规",   p:"chángguī",   def:"lệ thường, thông lệ; thông thường" },
+      { w:"厂商",   p:"chǎngshāng", def:"chủ xưởng, chủ doanh nghiệp" },
+      { w:"场景",   p:"chǎngjǐng",  def:"pha/cảnh (trong kịch, phim), quang cảnh, cảnh tượng" },
+      { w:"畅通",   p:"chàngtōng",  def:"thông suốt, (mạng Internet) không bị nghẽn" },
+      { w:"炒股",   p:"chǎo gǔ",    def:"đầu cơ/chơi cổ phiếu" },
+      { w:"车牌",   p:"chēpái",     def:"biển số xe" },
+      { w:"撤离",   p:"chèlí",      def:"sơ tán, di tản, rút lui khỏi, rời khỏi" }
+    ],
+    ex2: [
+      { options:["长假","常年","畅通","炒作","场景"],
+        items:[
+          { text:"有些明星为了出名（chū míng, nổi tiếng），甚至会拿自己的个人感情来进行____。", answer:"炒作" },
+          { text:"为了保证交通____，请各位司机朋友规范驾驶。", answer:"畅通" },
+          { text:"过去这么多年了，当时的____我已经有点儿记不清了。", answer:"场景" },
+          { text:"他们夫妻俩____不在一起生活，只是因为孩子才没有去办理离婚手续。", answer:"常年" },
+          { text:"____即将结束，孩子们就要回到那个安静了两个月的校园了。", answer:"长假" }
+        ]},
+      { options:["长久","厂商","超","车号","常规"],
+        items:[
+          { text:"经理，上午有几个____打电话过来找你。", answer:"厂商" },
+          { text:"这车怎么撞了人就跑了?! ____ 记下来没有?", answer:"车号" },
+          { text:"这里的景色____美，我都不想走了。", answer:"超" },
+          { text:"你这样两个城市来回跑不是____的办法，时间长了，夫妻感情一定会受影响。", answer:"长久" },
+          { text:"这只是一次____会议，不是为了处分谁。", answer:"常规" }
+        ]},
+      { options:["长跑","场地","超出","车牌","炒股"],
+        items:[
+          { text:"他的高考成绩____录取分数线30多分。", answer:"超出" },
+          { text:"老李买了辆新车，要我陪他去上____，上午可能晚点儿来公司。", answer:"车牌" },
+          { text:"肯尼亚（Kěnníyà, Kenya）运动员获得了本次马拉松____比赛的冠军。", answer:"长跑" },
+          { text:"他去年____挣了一大笔钱，但是今年又都赔进去了。", answer:"炒股" },
+          { text:"请与比赛无关的人员立刻离开比赛____！", answer:"场地" }
+        ]},
+      { options:["长远","场馆","炒","车展","撤离"],
+        items:[
+          { text:"北京国际展览中心有多个____，今年我们的展位在E馆。", answer:"场馆" },
+          { text:"最近我去看了好几个____，但是都没有看到自己特别满意的车。", answer:"车展" },
+          { text:"地震了，我们必须马上从这座大楼____！", answer:"撤离" },
+          { text:"晚上去我那儿____几个菜、喝两杯，怎么样？", answer:"炒" },
+          { text:"他对公司的发展有一个比较____的规划。", answer:"长远" }
+        ]}
+    ],
+    ex3: [
+      { q:"年轻人眼光要放____一点儿，不要只看眼前。",
+        opts:["长远","长期","长久","常年"], a:0 },
+      { q:"公共____禁止吸烟。",
+        opts:["场馆","场地","场景","场所"], a:3 },
+      { q:"这家餐厅的服务很____，不知道网上评价怎么那么好。",
+        opts:["常规","一般","通常","规定"], a:1 },
+      { q:"我有个朋友最爱吃这家的“金牌蛋____饭”。",
+        opts:["烧","炒","爆","烤"], a:1 },
+      { q:"由于受到了不公正待遇，我们公司决定立刻____谈判。",
+        opts:["后退","退出","离开","撤离"], a:1 }
+    ]
+  }
+};
+
+/* =========================================================
+   4. 本地存储
+   ========================================================= */
+function loadProgress(){
+  try { return JSON.parse(localStorage.getItem('yujinxiang_progress') || '{}'); }
+  catch(e){ return {}; }
+}
+function saveProgress(p){
+  try { localStorage.setItem('yujinxiang_progress', JSON.stringify(p)); } catch(e){}
+}
+function loadCollected(){
+  try { return JSON.parse(localStorage.getItem('yujinxiang_flowers') || '[]'); }
+  catch(e){ return []; }
+}
+function saveCollected(c){
+  try { localStorage.setItem('yujinxiang_flowers', JSON.stringify(c)); } catch(e){}
+}
+function loadTheme(){
+  try { return localStorage.getItem('yujinxiang_theme') || 'light'; }
+  catch(e){ return 'light'; }
+}
+function saveTheme(t){
+  try { localStorage.setItem('yujinxiang_theme', t); } catch(e){}
+}
+
+let progress = loadProgress();
+let collectedFlowers = loadCollected();
+let currentTheme = loadTheme();
+
+/* =========================================================
+   5. 语音
+   ========================================================= */
+let zhVoice = null;
+let readingAll = false;
+
+function pickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  const voices = window.speechSynthesis.getVoices();
+  if(!voices.length) return;
+  const zhVoices = voices.filter(v => /^(zh|cmn)/i.test(v.lang));
+  const femaleHints = ['xiaoxiao','xiaoyi','yaoyao','ting-ting','tingting','mei-jia','meijia',
+                       'sin-ji','sinji','huihui','yating','hanhan','zhiyu','female','女'];
+  for(const v of zhVoices){
+    const n = (v.name || '').toLowerCase();
+    if(femaleHints.some(h => n.includes(h))){ zhVoice = v; return; }
+  }
+  zhVoice = zhVoices[0] || null;
+}
+
+if('speechSynthesis' in window){
+  pickVoice();
+  window.speechSynthesis.onvoiceschanged = pickVoice;
+}
+
+function speak(text, rate){
+  if(!('speechSynthesis' in window) || !text) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'zh-CN';
+  u.rate = typeof rate === 'number' ? rate : 0.92;
+  u.pitch = 1.05;
+  if(zhVoice) u.voice = zhVoice;
+  window.speechSynthesis.speak(u);
+}
+
+function speakAll(words){
+  if(!('speechSynthesis' in window) || !words || !words.length) return;
+  if(readingAll){
+    window.speechSynthesis.cancel();
+    readingAll = false;
+    return;
+  }
+  readingAll = true;
+  let i = 0;
+  function next(){
+    if(i >= words.length){ readingAll = false; return; }
+    const u = new SpeechSynthesisUtterance(words[i]);
+    u.lang = 'zh-CN';
+    u.rate = 0.85;
+    u.pitch = 1.05;
+    if(zhVoice) u.voice = zhVoice;
+    u.onend = () => { i++; setTimeout(next, 320); };
+    window.speechSynthesis.speak(u);
+  }
+  next();
+}
+
+function speakCurrentUnitWords(){
+  const d = UNIT_DATA[currentUnit];
+  if(d) speakAll(d.words);
+}
+
+/* =========================================================
+   6. 工具
+   ========================================================= */
+function shuffle(a){
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+function strip(s){
+  return (s||'').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[\s'’·]/g,'');
+}
+const LETTER = i => String.fromCharCode(65 + i);
+
+function highlightWord(sentence, word){
+  if(!word || !sentence) return sentence;
+  return sentence.split(word).join(`<span class="hl">${word}</span>`);
+}
+
+function wrapLatin(sentence){
+  return sentence.replace(/（[^）]*）/g, m => `<span class="latin">${m}</span>`);
+}
+
+function processSentence(sentence, word){
+  return wrapLatin(highlightWord(sentence, word));
+}
+
+function attrEscape(s){
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/"/g,'&quot;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;');
+}
+
+/* =========================================================
+   7. 状态
+   ========================================================= */
+let currentUnit = 1;
+let matchSel = null;
+let matchedCount = 0;
+let matchOrder = [];
+
+/* =========================================================
+   8. 主题切换
+   ========================================================= */
+function applyTheme(){
+  document.body.classList.toggle('dark', currentTheme === 'dark');
+  const icon = document.getElementById('themeIcon');
+  if(!icon) return;
+  if(currentTheme === 'dark'){
+    icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+  } else {
+    icon.innerHTML = `
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    `;
+  }
+}
+
+function toggleTheme(){
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  saveTheme(currentTheme);
+  applyTheme();
+}
+
+/* =========================================================
+   9. 花朵收藏
+   ========================================================= */
+function toggleFlowerPanel(){
+  const panel = document.getElementById('flowerPanel');
+  panel.classList.toggle('open');
+  if(panel.classList.contains('open')) renderFlowerGrid();
+}
+
+function renderFlowerBtn(){
+  const btn = document.getElementById('flowerCount');
+  if(btn) btn.textContent = collectedFlowers.length;
+}
+
+function renderFlowerGrid(){
+  const grid = document.getElementById('flowerGrid');
+  const counter = document.getElementById('collectCount');
+  if(!grid) return;
+  counter.textContent = `${collectedFlowers.length} / ${FLOWERS.length}`;
+
+  let html = '';
+  for(let i = 0; i < FLOWERS.length; i++){
+    const f = FLOWERS[i];
+    const unlocked = collectedFlowers.includes(i + 1);
+    html += `
+      <div class="flower-slot ${unlocked ? 'unlocked' : 'locked'}"
+           onclick="${unlocked ? `openFlowerDetail(${i})` : ''}"
+           title="${unlocked ? f.name : 'Chưa mở khóa'}">
+        <span class="slot-idx">${i + 1}</span>
+        <span class="flower-emoji small">${unlocked ? f.emoji : '🌱'}</span>
+        <span class="flower-name">${unlocked ? f.name : '???'}</span>
+      </div>`;
+  }
+  grid.innerHTML = html;
+}
+
+function openFlowerDetail(idx){
+  const f = FLOWERS[idx];
+  if(!f) return;
+  document.getElementById('fdEmoji').textContent = f.emoji;
+  document.getElementById('fdName').textContent = f.name;
+  document.getElementById('fdMeaning').textContent = `"${f.meaning}"`;
+  document.getElementById('fdUnit').textContent = `Bài ${idx + 1}`;
+  document.getElementById('flowerDetail').classList.add('open');
+}
+function closeFlowerDetail(e){
+  if(e && e.target !== e.currentTarget) return;
+  document.getElementById('flowerDetail').classList.remove('open');
+}
+
+function showFlowerToast(unitNum){
+  const f = FLOWERS[unitNum - 1];
+  if(!f) return;
+  document.getElementById('toastFlower').textContent = f.emoji;
+  document.getElementById('toastName').textContent = f.name;
+  document.getElementById('toastMeaning').textContent = `"${f.meaning}"`;
+
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => toast.classList.remove('show'), 4200);
+}
+
+/* =========================================================
+   10. 进度
+   ========================================================= */
+function markExerciseDone(exKey){
+  if(!progress[currentUnit]) progress[currentUnit] = {};
+  progress[currentUnit][exKey] = true;
+  saveProgress(progress);
+  updateProgressBar();
+  checkUnitCompletion();
+}
+
+function checkUnitCompletion(){
+  const p = progress[currentUnit];
+  if(!p) return;
+  if(p.ex1 && p.ex2 && p.ex3){
+    if(!collectedFlowers.includes(currentUnit)){
+      collectedFlowers.push(currentUnit);
+      saveCollected(collectedFlowers);
+      renderFlowerBtn();
+      renderFlowerGrid();
+      markUnitBtnCompleted(currentUnit);
+      showFlowerToast(currentUnit);
+    }
+  }
+}
+
+function markUnitBtnCompleted(n){
+  const btn = document.querySelector(`.unit-btn[data-unit="${n}"]`);
+  if(btn) btn.classList.add('completed');
+}
+
+function updateProgressBar(){
+  const p = progress[currentUnit] || {};
+  const done = ['ex1','ex2','ex3'].filter(k => p[k]).length;
+  const pct = Math.round(done / 3 * 100);
+  const fill = document.querySelector('.progress-fill');
+  const label = document.querySelector('.progress-label');
+  if(fill) fill.style.width = pct + '%';
+  if(label) label.innerHTML = `<b>${done}</b> / 3 bài tập · <b>${pct}%</b>`;
+}
+
+function isUnitDone(n){
+  const p = progress[n] || {};
+  return !!(p.ex1 && p.ex2 && p.ex3);
+}
+
+/* =========================================================
+   11. 导航
+   ========================================================= */
+function renderNav(){
+  const list = document.getElementById('unitList');
+  let html = '';
+  for(let i=0;i<UNIT_COUNT;i++){
+    const p = unitPalette(i);
+    const done = isUnitDone(i+1) || collectedFlowers.includes(i+1);
+    html += `<button class="unit-btn ${done ? 'completed' : ''}" data-unit="${i+1}" title="第${i+1}单元"
+      style="--b-soft:${p.soft};--b-line:${p.line};--b-deep:${p.deep}">${i+1}</button>`;
+  }
+  list.innerHTML = html;
+  list.addEventListener('click', e => {
+    const b = e.target.closest('.unit-btn');
+    if(b) renderUnit(+b.dataset.unit);
+  });
+}
+
+function setActiveNav(n){
+  document.querySelectorAll('.unit-btn').forEach(b=>{
+    b.classList.toggle('active', +b.dataset.unit === n);
+  });
+  const active = document.querySelector('.unit-btn.active');
+  if(active) active.scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'});
+}
+
+/* =========================================================
+   12. 渲染单元
+   ========================================================= */
+function renderUnit(n){
+  if('speechSynthesis' in window) window.speechSynthesis.cancel();
+  readingAll = false;
+
+  currentUnit = n;
+  setActiveNav(n);
+
+  const app = document.getElementById('app');
+  const data = UNIT_DATA[n];
+  const p = unitPalette(n-1);
+  const cssVars = `--uc-soft:${p.soft};--uc-mid:${p.mid};--uc-line:${p.line};--uc-deep:${p.deep};`;
+
+  if(!data){
+    app.innerHTML = `
+      <div class="unit-card" style="${cssVars}">
+        <div class="unit-head">
+          <div>
+            <div class="unit-kicker">HSK 6 · Vocabulary Practice</div>
+            <h2 class="unit-title"><span class="zh">第${n}单元</span></h2>
+          </div>
+          <span class="unit-badge zh">词汇速记速练</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-track"><div class="progress-fill" style="width:0%"></div></div>
+          <span class="progress-label"><b>0</b> / 3 bài tập · <b>0%</b></span>
+        </div>
+        <p style="text-align:center;padding:40px 0;color:#7C8A80;font-size:14px">
+          Nội dung bài này đang được cập nhật…
+        </p>
+      </div>`;
+    window.scrollTo({top:0, behavior:'smooth'});
+    return;
+  }
+
+  const pp = progress[n] || {};
+  const done = ['ex1','ex2','ex3'].filter(k => pp[k]).length;
+  const pct = Math.round(done / 3 * 100);
+
+  app.innerHTML = `
+    <div class="unit-card" style="${cssVars}">
+
+      <div class="unit-head">
+        <div>
+          <div class="unit-kicker">HSK 6 · Vocabulary Practice</div>
+          <h2 class="unit-title">
+            <span class="zh">第${n}单元</span>
+            <span class="unit-title-vi">${data.vi}</span>
+          </h2>
+        </div>
+        <span class="unit-badge zh">词汇速记速练</span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-track">
+          <div class="progress-fill" style="width:${pct}%"></div>
+        </div>
+        <span class="progress-label">
+          <b>${done}</b> / 3 bài tập · <b>${pct}%</b>
+        </span>
+      </div>
+
+      <!-- ① 目标词语 -->
+      <section class="block">
+        <h3 class="block-title">
+          <span class="badge">①</span>
+          <span class="zh">目标词语</span>
+          <span class="vi">Từ vựng mục tiêu</span>
+          <button class="title-speaker" title="朗读全部词语" onclick="speakCurrentUnitWords()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </button>
+        </h3>
+        <div class="word-grid">
+          ${data.words.map((w,i)=>`
+            <div class="word-chip" data-word="${attrEscape(w)}" onclick="speak(this.dataset.word)" title="点击发音">
+              <span class="w-idx">${i+1}</span>
+              <span class="zh">${w}</span>
+              <svg class="w-speaker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </div>`).join('')}
+        </div>
+      </section>
+
+      <!-- ② 速记 -->
+      <section class="block">
+        <h3 class="block-title">
+          <span class="badge">②</span>
+          <span class="zh">速记</span>
+          <span class="vi">Ghi nhớ nhanh</span>
+        </h3>
+        ${data.notes.map((nt,i)=>noteHTML(nt,i)).join('')}
+      </section>
+
+      <!-- ③ 速练 -->
+      <section class="block">
+        <h3 class="block-title">
+          <span class="badge">③</span>
+          <span class="zh">速练</span>
+          <span class="vi">Luyện tập nhanh</span>
+        </h3>
+        ${ex1HTML(data.ex1)}
+        ${ex2HTML(data.ex2)}
+        ${ex3HTML(data.ex3)}
+      </section>
+
+    </div>`;
+
+  initMatch();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ---------- 速记 HTML ---------- */
+function noteHTML(nt, i){
+  return `
+  <article class="note">
+    <div class="note-head">
+      <span class="note-idx">${i+1}</span>
+      <span class="zh note-word">${nt.w}</span>
+      <span class="note-pinyin">${nt.p}</span>
+      <span class="note-pos">${nt.pos}</span>
+      <span class="note-vi">${nt.vi}</span>
+    </div>
+    ${nt.col ? `<div class="note-col"><span class="tag">搭配</span><span class="zh">${nt.col}</span></div>` : ''}
+    <ul class="note-ex">
+      ${nt.ex.map(e=>{
+        const processed = processSentence(e, nt.w);
+        return `<li class="zh">
+          <button class="speak-btn" data-sentence="${attrEscape(e)}" title="朗读句子"
+                  onclick="speak(this.dataset.sentence, 0.92)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </button>
+          <span class="ex-text">${processed}</span>
+        </li>`;
+      }).join('')}
+    </ul>
+  </article>`;
+}
+
+/* ---------- 速练一 HTML ---------- */
+function ex1HTML(items){
+  matchOrder = shuffle([...Array(items.length).keys()]);
+
+  return `
+  <div class="exercise">
+    <h4 class="ex-title zh">一、先根据词语写拼音，再将词语和正确的释义连起来</h4>
+    <p class="ex-sub">Viết phiên âm của từ và nối từ với nghĩa chính xác.</p>
+
+    <div class="sub-block">
+      <div class="sub-label">1 · VIẾT PHIÊN ÂM</div>
+      <div class="pinyin-grid">
+        ${items.map((it,i)=>`
+          <div class="py-item">
+            <span class="zh py-word">${it.w}</span>
+            <input class="py-input" data-idx="${i}" placeholder="viết pinyin…"
+                   autocomplete="off" autocapitalize="off" spellcheck="false">
+            <span class="py-fb"></span>
+          </div>`).join('')}
+      </div>
+      <div class="btn-row">
+        <button class="btn small" onclick="checkPinyin()">Kiểm tra phiên âm</button>
+        <button class="btn ghost small" onclick="resetPinyin()">Làm lại</button>
+      </div>
+    </div>
+
+    <div class="sub-block">
+      <div class="sub-label">2 · NỐI TỪ VỚI NGHĨA</div>
+      <div class="match-wrap">
+        <div class="match-col" id="matchLeft">
+          ${items.map((it,i)=>`
+            <button class="match-item" data-side="L" data-key="${i}">
+              <span class="zh">${it.w}</span>
+            </button>`).join('')}
+        </div>
+        <div class="match-col" id="matchRight">
+          ${matchOrder.map(k=>`
+            <button class="match-item" data-side="R" data-key="${k}">${items[k].def}</button>`).join('')}
+        </div>
+      </div>
+      <div class="match-status" id="matchStatus">Đã nối: 0 / ${items.length}</div>
+      <div class="btn-row">
+        <button class="btn ghost small" onclick="resetMatch()">Làm lại</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ---------- 速练二 HTML ---------- */
+function ex2HTML(groups){
+  return `
+  <div class="exercise">
+    <h4 class="ex-title zh">二、选择合适的词语填空</h4>
+    <p class="ex-sub">Chọn từ phù hợp để điền vào chỗ trống.</p>
+    ${groups.map((g,gi)=>`
+      <div class="fill-group">
+        <div class="fill-options">
+          ${g.options.map((o,oi)=>`
+            <span class="opt-pill"><b>${LETTER(oi)}</b><span class="zh">${o}</span></span>`).join('')}
+        </div>
+        <ol class="fill-list">
+          ${g.items.map((it,ii)=>{
+            const parts = it.text.split('____');
+            const sel = `<select class="fill-select" data-g="${gi}" data-i="${ii}">
+                <option value="">选答案</option>
+                ${g.options.map(o=>`<option value="${o}">${o}</option>`).join('')}
+              </select>`;
+            return `<li><span class="zh">${parts.join(sel)}</span></li>`;
+          }).join('')}
+        </ol>
+      </div>`).join('')}
+    <div class="btn-row">
+      <button class="btn small" onclick="checkFill()">Kiểm tra đáp án</button>
+      <button class="btn ghost small" onclick="resetFill()">Làm lại</button>
+    </div>
+  </div>`;
+}
+
+/* ---------- 速练三 HTML ---------- */
+function ex3HTML(items){
+  return `
+  <div class="exercise">
+    <h4 class="ex-title zh">三、选择合适的词语完成句子</h4>
+    <p class="ex-sub">Chọn từ / cụm từ phù hợp để hoàn thành câu.</p>
+    <ol class="mc-list">
+      ${items.map((it,qi)=>`
+        <li class="mc-item">
+          <div class="mc-q zh">${it.q}</div>
+          <div class="mc-opts">
+            ${it.opts.map((o,oi)=>`
+              <button class="mc-opt" data-q="${qi}" data-o="${oi}">
+                <b>${LETTER(oi)}</b><span class="zh">${o}</span>
+              </button>`).join('')}
+          </div>
+        </li>`).join('')}
+    </ol>
+    <div class="btn-row">
+      <button class="btn small" onclick="checkMC()">Kiểm tra đáp án</button>
+      <button class="btn ghost small" onclick="resetMC()">Làm lại</button>
+    </div>
+  </div>`;
+}
+
+/* =========================================================
+   13. 速练一：拼音检查
+   ========================================================= */
+function checkPinyin(){
+  const data = UNIT_DATA[currentUnit];
+  if(!data) return;
+  const items = data.ex1;
+
+  document.querySelectorAll('.py-input').forEach(inp=>{
+    const idx = +inp.dataset.idx;
+    const target = items[idx].p;
+    const fb = inp.parentElement.querySelector('.py-fb');
+    const ok = strip(inp.value) === strip(target);
+
+    inp.classList.toggle('ok', ok);
+    inp.classList.toggle('no', !ok && inp.value.trim() !== '');
+    fb.textContent = ok ? '✓ chính xác' : (inp.value.trim() ? '✗ đáp án: ' + target : '');
+    fb.style.color = ok ? '#2E9E67' : '#C0504D';
+  });
+
+  markExerciseDone('ex1');
+}
+function resetPinyin(){
+  document.querySelectorAll('.py-input').forEach(inp=>{
+    inp.value = '';
+    inp.classList.remove('ok','no');
+    inp.parentElement.querySelector('.py-fb').textContent = '';
+  });
+}
+
+/* =========================================================
+   14. 速练一：连线
+   ========================================================= */
+function initMatch(){
+  matchSel = null;
+  matchedCount = 0;
+  updateMatchStatus();
+
+  document.querySelectorAll('#matchLeft .match-item, #matchRight .match-item').forEach(btn=>{
+    btn.addEventListener('click', onMatchClick);
+  });
+}
+
+function onMatchClick(e){
+  const btn = e.currentTarget;
+  if(btn.classList.contains('matched')) return;
+
+  if(!matchSel){
+    document.querySelectorAll('.match-item.sel').forEach(b=>b.classList.remove('sel'));
+    btn.classList.add('sel');
+    matchSel = btn;
+    return;
+  }
+
+  if(matchSel === btn){
+    btn.classList.remove('sel');
+    matchSel = null;
+    return;
+  }
+
+  if(matchSel.dataset.side === btn.dataset.side){
+    matchSel.classList.remove('sel');
+    btn.classList.add('sel');
+    matchSel = btn;
+    return;
+  }
+
+  const left  = matchSel.dataset.side === 'L' ? matchSel : btn;
+  const right = matchSel.dataset.side === 'R' ? matchSel : btn;
+
+  if(left.dataset.key === right.dataset.key){
+    left.classList.add('matched');
+    right.classList.add('matched');
+    left.classList.remove('sel');
+    right.classList.remove('sel');
+    matchedCount++;
+    updateMatchStatus();
+  }else{
+    left.classList.add('wrong');
+    right.classList.add('wrong');
+    setTimeout(()=>{
+      left.classList.remove('wrong');
+      right.classList.remove('wrong');
+    }, 600);
+    left.classList.remove('sel');
+    right.classList.remove('sel');
+  }
+  matchSel = null;
+}
+
+function updateMatchStatus(){
+  const data = UNIT_DATA[currentUnit];
+  const total = data ? data.ex1.length : 0;
+  const el = document.getElementById('matchStatus');
+  if(el) el.textContent = `Đã nối: ${matchedCount} / ${total}` + (matchedCount === total ? ' 🎉' : '');
+}
+
+function resetMatch(){
+  matchSel = null;
+  matchedCount = 0;
+  document.querySelectorAll('.match-item').forEach(b=>{
+    b.classList.remove('matched','sel','wrong');
+  });
+  updateMatchStatus();
+}
+
+/* =========================================================
+   15. 速练二：选词填空
+   ========================================================= */
+function checkFill(){
+  const data = UNIT_DATA[currentUnit];
+  if(!data) return;
+
+  document.querySelectorAll('.fill-select').forEach(sel=>{
+    const gi = +sel.dataset.g;
+    const ii = +sel.dataset.i;
+    const correct = data.ex2[gi].items[ii].answer;
+    const ok = sel.value === correct;
+
+    sel.classList.toggle('ok', ok);
+    sel.classList.toggle('no', !ok && sel.value !== '');
+    if(!ok && sel.value !== '') sel.title = 'Đáp án đúng: ' + correct;
+    else sel.title = '';
+  });
+
+  markExerciseDone('ex2');
+}
+function resetFill(){
+  document.querySelectorAll('.fill-select').forEach(sel=>{
+    sel.value = '';
+    sel.classList.remove('ok','no');
+    sel.title = '';
+  });
+}
+
+/* =========================================================
+   16. 速练三：选择
+   ========================================================= */
+function checkMC(){
+  const data = UNIT_DATA[currentUnit];
+  if(!data) return;
+
+  document.querySelectorAll('.mc-item').forEach((li, qi)=>{
+    const answer = data.ex3[qi].a;
+    li.querySelectorAll('.mc-opt').forEach((btn, oi)=>{
+      btn.classList.remove('ok','no');
+      if(oi === answer) btn.classList.add('ok');
+      else if(btn.classList.contains('sel')) btn.classList.add('no');
+    });
+  });
+
+  markExerciseDone('ex3');
+}
+function resetMC(){
+  document.querySelectorAll('.mc-opt').forEach(btn=>{
+    btn.classList.remove('ok','no','sel');
+  });
+}
+
+/* 点击选择 MC */
+document.addEventListener('click', e=>{
+  const btn = e.target.closest('.mc-opt');
+  if(!btn) return;
+  const li = btn.closest('.mc-item');
+  li.querySelectorAll('.mc-opt').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+});
+
+/* =========================================================
+   17. 启动
+   ========================================================= */
+applyTheme();
+renderNav();
+renderFlowerBtn();
+renderUnit(1);
+</script>
+</body>
+</html>
